@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.EditInfoActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:title="编辑资料"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/edit_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:minEms="1"
+                android:paddingLeft="5dp"
+                android:textColor="@color/color_343434" />
+
+        </RelativeLayout>
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="5dp"
+            android:text="最多"
+            android:textColor="@color/color_e0b777"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_saveinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/color_e0b777"
+            android:text="保存"
+            app:clickview="@{(view)->activity.saveInfo(view)}" />
+
+    </LinearLayout>
+</layout>

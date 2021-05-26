@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ConfirmOrderActivity" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/confirm_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            android:background="@color/color_343434"
+            app:leftIcon="@mipmap/back_white"
+            app:title="确认订单"
+            app:titleColor="@color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_notnull_address"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/white"
+            android:visibility="visible"
+            app:clickview="@{(view)->click.enterMydress(view)}">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_confirm_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_confirm_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/all_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/txt_size_13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_name"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/transparent"
+                android:contentDescription="TODO"
+                android:src="@mipmap/goods_enter"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_phone" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_null_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:clickview="@{(view)->click.enterMydress(view)}">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请先输入收货地址"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="TODO"
+                android:src="@mipmap/goods_enter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sp_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_confirm_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="配送方式"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="普通配送"
+                android:textColor="@color/color_c1c1c1"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintLeft_toRightOf="@id/tv_confirm_txt1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="快递¥0"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+
+            android:background="@color/color_f2f2f2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_confirm_txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="商品总额"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/sp_zonge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="0元"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_confirm_txt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="运费"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_txt3"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="包邮"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_txt3" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="实付金额"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_txt4"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/realprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="¥---"
+                android:textColor="@color/color_d81e07"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_txt4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_f2f2f2"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="实付金额:"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_16" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/realprice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:text="¥--"
+                android:textColor="@color/color_d81e07"
+                android:textSize="@dimen/txt_size_16" />
+
+            <Button
+                android:id="@+id/btn_commit_order"
+                android:layout_width="90dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_common"
+                android:text="提交订单"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_16"
+                app:clickview="@{(view)->activity.onClick(view)}" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

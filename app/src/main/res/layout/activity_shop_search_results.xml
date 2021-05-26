@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ShopSearchResultsActivity" />
+
+        <variable
+            name="flg"
+            type="Integer" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/transparent"
+                android:src="@mipmap/back_grey"
+                app:clickview="@{(view)->activity.clickExit(view)}" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_frame"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/sertch_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/search_bg_red_15radius"
+                    android:drawableLeft="@mipmap/search_small"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:hint="请输入商品名称"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/txt_size_11"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/iv_clear_search" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="13dp"
+                android:paddingRight="16dp"
+                android:text="搜索"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_size_13"
+                app:clickview="@{(view)->activity.clicSearch(view)}" />
+
+        </LinearLayout>
+
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:id="@+id/lr_shop_goodslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/no_shop_data"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

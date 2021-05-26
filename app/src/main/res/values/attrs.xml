@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义数字进度条 -->
+    <declare-styleable name="NumberProgressBar">
+        <attr name="pb_progress" format="integer" />
+        <attr name="pb_maxProgress" format="integer" />
+
+        <attr name="pb_textSize" format="dimension" />
+        <attr name="pb_textColor" format="color" />
+
+        <attr name="pb_textOffset" format="dimension" />
+
+        <attr name="pb_unreachedColor" format="color" />
+        <attr name="pb_reachedColor" format="color" />
+
+        <attr name="pb_reachedHeight" format="dimension" />
+        <attr name="pb_unreachedHeight" format="dimension" />
+
+    </declare-styleable>
+
+    <!-- 滚动列表 -->
+    <declare-styleable name="LoopView">
+        <attr name="lv_lineColor" format="color" />
+        <attr name="lv_topBottomTextColor" format="color" />
+        <attr name="lv_centerTextColor" format="color" />
+        <attr name="lv_textSize" format="dimension" />
+        <attr name="lv_canLoop" format="boolean" />
+        <attr name="lv_initPosition" format="integer" />
+        <attr name="lv_drawItemCount" format="integer" />
+    </declare-styleable>
+
+    <!-- 进度条 -->
+    <declare-styleable name="ProgressView">
+        <attr name="progressIndeterminate" format="boolean" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="float" />
+        <attr name="barSpinCycleTime" format="integer" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="fillRadius" format="boolean" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <!--RoundImage-->
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" format="boolean" />
+        <!--        <attr name="type" />-->
+    </declare-styleable>
+
+    <declare-styleable name="BannerRoundImageView">
+        <attr name="rect_adius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="Indicator">
+
+        <attr name="setNumber" format="integer"/>
+        <attr name="Indicator_radius" format="integer"/>
+        <attr name="Indicator_bgColor" format="reference"/>
+        <attr name="Indicator_foreColor" format="reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="BannerIndicatorView">
+        <attr name="app_cell_radius" format="dimension"/>
+        <attr name="app_cell_margin" format="dimension"/>
+        <attr name="app_cell_count" format="integer"/>
+        <attr name="app_current_position" format="integer"/>
+        <attr name="app_selected_color" format="color|reference"/>
+        <attr name="app_normal_color" format="color|reference"/>
+        <attr name="app_indicator_style" format="enum">
+            <enum name="CIRCLE" value="0"/>
+            <enum name="RECT" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ImgTabLayout">
+
+        <attr name="mTextColorDef" format="color"/>//文本默认颜色
+        <attr name="mTextColorSelect" format="color"/>//文本选中颜色
+
+        <attr name="mTextBgDefResId" format="reference"/>//文本默认背景
+        <attr name="mTextBgSelectResId" format="reference"/>//文本选中背景
+        <attr name="indicatorBgResId" format="reference"/>// 指示器图片（或颜色）资源
+
+        <attr name="indicatorHeight" format="dimension"/>//指示器高
+        <attr name="indicatorWidth" format="dimension"/>//指示器宽
+        <attr name="viewHeight" format="dimension"/>// item高度
+        <attr name="viewWidth" format="dimension"/>// item宽度
+        <attr name="innerLeftMargin" format="dimension"/>// item距左
+        <attr name="innerRightMargin" format="dimension"/>// item距右
+        <attr name="textSize" format="dimension"/>// 默认字体大小
+        <attr name="textSizeSel" format="dimension"/>// 选中后字体大小
+        <!--padding设置-->
+        <attr name="mTextpaddingtop" format="dimension"/>
+        <attr name="mTextpaddingleft" format="dimension"/>
+        <attr name="mTextpaddingright" format="dimension"/>
+        <attr name="mTextpaddingbottom" format="dimension"/>
+
+    </declare-styleable>
+
+    <!-- 退货进度 -->
+    <declare-styleable name="ReturnGoodsProgressView">
+        <attr name="leftlinevisible" format="boolean" />
+        <attr name="rightlinevisible" format="boolean" />
+    </declare-styleable>
+
+    <!-- 自定义tablayout -->
+    <attr name="cy_height_indicator" format="dimension|reference" />
+    <attr name="cy_width_indicator_selected" format="dimension|reference"/>
+    <attr name="cy_width_indicator_max" format="dimension|reference"/>
+    <attr name="cy_color_indicator" format="color|reference"/>
+
+    <attr name="cy_space_vertical" format="dimension|reference"/>
+    <attr name="cy_space_horizontal" format="dimension|reference"/>
+    <declare-styleable name="TabGradientTextView">
+        <attr name="cy_textColorNormal" format="color|reference" />
+        <attr name="cy_textColorSelected" format="color|reference"/>
+    </declare-styleable>
+    <declare-styleable name="TabLayoutScroll">
+        <attr name="cy_space_vertical" />
+        <attr name="cy_space_horizontal" />
+    </declare-styleable>
+    <declare-styleable name="TabLayoutMulti">
+        <attr name="cy_space_vertical" />
+        <attr name="cy_space_horizontal" />
+        <attr name="cy_scrollable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="IndicatorLineView">
+        <attr name="cy_height_indicator" />
+        <attr name="cy_width_indicator_selected"/>
+        <attr name="cy_width_indicator_max"/>
+        <attr name="cy_radius_indicator" format="dimension|reference"/>
+        <attr name="cy_color_indicator" />
+    </declare-styleable>
+    <declare-styleable name="IndicatorTriangleView">
+        <attr name="cy_height_indicator" />
+        <attr name="cy_width_indicator_selected"/>
+        <attr name="cy_width_indicator_max"/>
+        <attr name="cy_color_indicator" />
+    </declare-styleable>
+
+</resources>

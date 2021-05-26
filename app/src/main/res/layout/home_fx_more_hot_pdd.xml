@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.fragment.PddHomeFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hwyx_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@mipmap/btn_home_fx_more"
+        app:clickview="@{(view)->click.btnClick(view)}">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多爆款"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_13"
+                android:drawableRight="@mipmap/home_fx_more_icon"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

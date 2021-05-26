@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.SignInBean" />
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.SignInActivity" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="15dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="签到"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/txt_size_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/rl_toolbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:padding="7dp"
+            android:src="@mipmap/ico_left_back"
+            app:clickview='@{(view)->activity.clickexit(view,data.singInState)}'
+            app:layout_constraintBottom_toBottomOf="@id/txt_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_1"
+            app:layout_goneMarginLeft="6dp"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/color_FF4A4D"
+            app:layout_constraintTop_toBottomOf="@id/txt_1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:layout_marginTop="43dp"
+            android:background="@drawable/ico_qd_top_bg"
+            android:paddingTop="30dp"
+            android:paddingBottom="32dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_1">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的积分"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{data.credit+"",default=0}'
+                android:textColor="@color/color_FF4A4E"
+                android:textSize="@dimen/txt_size_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@id/txt_7"
+                android:layout_width="74dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/btn_circle_small"
+                android:gravity="center"
+                android:text="去使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@id/txt_6"
+            android:layout_width="0dp"
+            android:layout_height="159dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/banner_frame"
+            android:orientation="vertical"
+            android:paddingLeft="17dp"
+            android:paddingTop="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/txt_2">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"已连续签到"+data.singInTime+"天，连续签到，积分翻倍哦~~",default="已连续签到0天，连续签到，积分翻倍哦~~"}'
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="友情提醒：断签需要重头开始哦~"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/txt_size_12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="@id/guideline1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_6">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>0?@drawable/signin:@drawable/signin_w,default=@drawable/signin}"
+                        android:gravity="center"
+                        android:text="+10"
+                        android:textColor="@{data.singInTime>0?@color/white:@color/color_E67E84,default=@color/color_E67E84}"
+                        android:textSize="@dimen/txt_size_13" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="1天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>1?@drawable/signin:@drawable/signin_w,default=@drawable/signin_w}"
+                        android:gravity="center"
+                        android:text="+10"
+                        android:textColor="@{data.singInTime>1?@color/white:@color/color_E67E84,default=@color/white}" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="2天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>2?@drawable/signin:@drawable/signin_w,default=@drawable/signin_w}"
+                        android:gravity="center"
+                        android:text="+20"
+                        android:textColor="@{data.singInTime>2?@color/white:@color/color_E67E84,default=@color/white}" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="3天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>3?@drawable/signin:@drawable/signin_w,default=@drawable/signin_w}"
+                        android:gravity="center"
+                        android:text="+20"
+                        android:textColor="@{data.singInTime>3?@color/white:@color/color_E67E84,default=@color/white}" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="4天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>4?@drawable/signin:@drawable/signin_w,default=@drawable/signin_w}"
+                        android:gravity="center"
+                        android:text="+30"
+                        android:textColor="@{data.singInTime>4?@color/white:@color/color_E67E84,default=@color/white}" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="5天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>5?@drawable/signin:@drawable/signin_w,default=@drawable/signin_w}"
+                        android:gravity="center"
+                        android:text="+30"
+                        android:textColor="@{data.singInTime>5?@color/white:@color/color_E67E84,default=@color/white}" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="6天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="36dp"
+                        android:layout_height="47dp"
+                        android:background="@{data.singInTime>6?@drawable/signin:@drawable/signin_w,default=@drawable/signin_w}"
+                        android:gravity="center"
+                        android:text="+30"
+                        android:textColor="@{data.singInTime>6?@color/white:@color/color_E67E84,default=@color/white}" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="7天"
+                        android:textColor="@color/color_FF6A1016"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_everyday_sign"
+            android:layout_width="251dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="136dp"
+
+            android:background="@drawable/btn_circle_small"
+            android:gravity="center"
+            android:text='@{data.singInState==0?"继续签到":"已签到",default="继续签到"}'
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_13"
+            app:clickview='@{(view)->activity.onClick(view,data)}'
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_6"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/btn_everyday_sign"
+            tools:ignore="MissingConstraints">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分使用说明："
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:lineSpacingExtra="5dp"
+                android:text="1. 积分可用于自营商城商品抵扣，每100积分可抵扣1元 \n2. 每件商品均有明确标注抵扣金额 \n3. 每天签到可领取积分，断签将重新开始\n4. 用户每月收益结算后，奖励提现收益的10%积分"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

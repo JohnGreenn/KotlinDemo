@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.myapplication.view.MytextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_background2"
+    android:paddingLeft="9dp"
+    android:paddingTop="7dp"
+    android:paddingRight="9dp"
+    android:paddingBottom="7dp"
+    android:singleLine="true"
+    android:text="搜索内容"
+    android:textColor="@color/color_4D4D4D"
+    android:textSize="13sp"
+    android:layout_marginRight="@dimen/dp_7"
+    android:layout_marginBottom="@dimen/dp_12"/>

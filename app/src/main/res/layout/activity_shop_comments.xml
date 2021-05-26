@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ShopCommentsActivity"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/color_FF4A4E"
+            android:paddingTop="25dp"
+            app:lineVisible="false"
+            android:paddingBottom="@dimen/dp_10"
+            app:leftIcon="@mipmap/back_white"
+            app:titleColor="@color/white"
+            app:title="全部评论" />
+
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:id="@+id/lr_comments_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/no_comments"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

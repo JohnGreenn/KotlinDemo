@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.fragment.JDHomeFXFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/haowu_bg"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/mtv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="好物优选"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_15" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/mtv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:singleLine="true"
+                android:text="好宝贝都在这里"
+                android:textColor="#FF373A"
+                android:textSize="@dimen/txt_size_13" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.UserBean.IncomesBean" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="balance"
+            type="Double" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/status_bar_height" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="10dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="10dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/img_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sy_bg"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="¥"
+            android:textColor="@color/color_FDFF73"
+            android:textSize="@dimen/txt_size_12"
+            app:layout_constraintBottom_toBottomOf="@id/tv_banlance"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toLeftOf="@id/tv_banlance"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_banlance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="-.--"
+            android:textColor="@color/color_FDFF73"
+            android:textSize="@dimen/txt_size_26"
+            app:layout_constraintBottom_toBottomOf="@id/img_2"
+            app:layout_constraintLeft_toRightOf="@id/txt_1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/img_2"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="累计收益结算(元)"
+            android:textColor="@color/color_FFDFE3"
+            android:textSize="@dimen/txt_size_12"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tv_banlance"
+            tools:ignore="MissingConstraints" />
+
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我的收益"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_16"
+            app:layout_constraintBottom_toBottomOf="@id/img_1"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/img_1"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@id/img_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:src="@drawable/ico_left"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:background="@drawable/li_sy"
+            android:gravity="center"
+            android:text="历史预估收益"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_13"
+            app:layout_constraintBottom_toBottomOf="@id/img_2"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="135dp"
+            android:background="@drawable/li_sy_b"
+            android:orientation="vertical"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/img_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:clickview="@{(view)->click.showCashListActivity(view,3,data.paid_this_month.income)}">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_12" />
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{data.paid_this_month.income+"",default="0"}'
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_16" />
+
+                    </LinearLayout>
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:text="本月付款"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:clickview="@{(view)->click.showCashListActivity(view,4,data.earning_this_month.income)}">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_12" />
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{data.earning_this_month.income+"",default="0"}'
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_16" />
+
+                    </LinearLayout>
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:text="本月结算"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:clickview="@{(view)->click.showCashListActivity(view,5,data.paid_last_month.income)}">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_12" />
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{data.paid_last_month.income+"",default="0"}'
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_16" />
+
+                    </LinearLayout>
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:text="上月付款"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:clickview="@{(view)->click.showCashListActivity(view,6,data.earning_last_month.income)}">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_12" />
+
+                        <com.example.myapplication.view.MytextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{data.earning_last_month.income+"",default="0"}'
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/txt_size_16" />
+
+                    </LinearLayout>
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:text="上月结算"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/txt_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="149dp"
+            android:background="@drawable/sy_dd_mx"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:clickview='@{(view)->click.moreMoney(view,1,"",balance)}'
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/img_2"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/ico_sy_s" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:text="预估收益订单明细"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_13" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ico_sy_ri" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

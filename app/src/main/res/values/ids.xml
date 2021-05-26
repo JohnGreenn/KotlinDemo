@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="txt_1" type="id" />
+    <item name="txt_2" type="id" />
+    <item name="txt_3" type="id" />
+    <item name="txt_4" type="id" />
+    <item name="txt_5" type="id" />
+    <item name="txt_6" type="id" />
+    <item name="txt_7" type="id" />
+    <item name="img_1" type="id" />
+    <item name="img_2" type="id" />
+    <item name="img_3" type="id" />
+    <item name="img_4" type="id" />
+    <item name="guideline" type="id" />
+    <item name="guideline1" type="id" />
+    <item name="guideline2" type="id" />
+    <item name="guideline3" type="id" />
+
+</resources>

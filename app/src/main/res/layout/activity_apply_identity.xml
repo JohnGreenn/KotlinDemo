@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ApplyIdentityActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            android:background="@color/color_343434"
+            app:title="申请认证"
+            app:titleColor="@color/white"
+            app:leftIcon="@mipmap/back_white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="真实姓名" />
+
+                    <EditText
+                        android:id="@+id/edt_realname"
+                        style="@style/edit_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1"
+                        android:hint="请输入真实姓名" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机号码" />
+
+                    <EditText
+                        style="@style/edit_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1"
+                        android:hint="请输入手机号码" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="银行卡号" />
+
+                    <EditText
+                        android:id="@+id/edt_bankcard"
+                        style="@style/edit_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1"
+                        android:hint="请输入银行卡号" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开户人" />
+
+                    <EditText
+                        android:id="@+id/edt_open_account"
+                        style="@style/edit_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginLeft="34.5dp"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1"
+                        android:hint="请输入开户人信息" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="开户银行" />
+
+                    <EditText
+                        android:id="@+id/edt_open_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/btn_null2_common"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="支行名称" />
+
+                    <EditText
+                        android:id="@+id/edt_bankname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/btn_null2_common"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="证件类型" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/btn_null2_common"
+                        android:textSize="@dimen/txt_size_16"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_343434"
+                        android:text="身份证"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c1c1c1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/txt_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="证件号" />
+
+                    <EditText
+                        android:id="@+id/edt_cardnum"
+                        style="@style/edit_identity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginLeft="34.5dp"
+                        android:textSize="@dimen/txt_size_16"
+                        android:layout_weight="1"
+                        android:hint="请输入身份证号" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_identity_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@drawable/btn_null_common"
+                    app:clickview="@{(view)->activity.onClick(view)}">
+
+                    <ImageView
+                        android:id="@+id/iv_img1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_null_common"
+                        android:scaleType="fitXY"
+                        android:contentDescription="TODO" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/zxj"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="38dp"
+                        android:contentDescription="TODO" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:id="@+id/txt_hint1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_13"
+                        android:textColor="@color/color_999999"
+                        android:layout_gravity="center_horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="43dp"
+                        android:text="上传清晰的身份证人像面" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_identity_img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@drawable/btn_null_common"
+                    app:clickview="@{(view)->activity.onClick(view)}">
+
+                    <ImageView
+                        android:id="@+id/iv_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:contentDescription="TODO" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/zxj"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_gravity="center_horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="38dp"
+                        android:contentDescription="TODO" />
+
+                    <com.example.myapplication.view.MytextView
+                        android:id="@+id/txt_hint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_13"
+                        android:textColor="@color/color_999999"
+                        android:layout_gravity="center_horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="43dp"
+                        android:text="上传清晰的身份证背面" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btn_applyid_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/btn_common"
+                    android:text="提交"
+                    app:clickview="@{(view)->activity.onClick(view)}" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

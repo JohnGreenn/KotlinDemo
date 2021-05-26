@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.MobileBindActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MobileBindActivity">
+
+        <com.example.myapplication.view.LollipopFixedWebView
+            android:id="@+id/autch_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:title="绑定手机" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="绑定您的注册手机"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_20" />
+
+        <LinearLayout
+            android:id="@+id/ll_login_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.hjq.widget.view.ClearEditText
+                android:id="@+id/et_login_phone"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:hint="输入手机号码"
+                android:inputType="textVisiblePassword"
+                android:singleLine="true"
+                app:regexType="mobile" />
+
+            <View
+                style="@style/HorizontalLineStyle"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp" />
+
+            <com.hjq.widget.view.PasswordEditText
+                android:id="@+id/et_login_password"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:hint="输入密码"
+                android:maxLength="20"
+                android:maxLines="1" />
+
+            <View
+                style="@style/HorizontalLineStyle"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login_bind"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_red_20radius"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                app:clickview="@{(view)->activity.onClick(view)}"
+                android:text="绑定" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_login_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="60dp"
+                android:text="没有注册？点我立即注册"
+                app:clickview="@{(view)->click.showMobileRegLogin(view,2)}"
+                android:textColor="@color/color_5A8DDF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

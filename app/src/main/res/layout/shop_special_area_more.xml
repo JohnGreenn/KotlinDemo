@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="imgurl"
+            type="String" />
+
+        <variable
+            name="img1"
+            type="String" />
+
+        <variable
+            name="img2"
+            type="String" />
+
+        <variable
+            name="img3"
+            type="String" />
+
+        <variable
+            name="data1"
+            type="com.hpkj.sheplive.entity.SpecialAreaBean" />
+
+        <variable
+            name="data2"
+            type="com.hpkj.sheplive.entity.SpecialAreaBean" />
+
+        <variable
+            name="data3"
+            type="com.hpkj.sheplive.entity.SpecialAreaBean" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_red">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/area_logo"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            app:imgmoren="@{@drawable/app_icon}"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="360dp"
+            android:layout_marginLeft="7.5dp"
+            android:layout_centerVertical="true"
+            app:url='@{imgurl}'/>
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:gravity="center"
+            android:text="专区"
+            android:layout_toRightOf="@+id/area_logo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_15" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_more"
+            android:layout_width="65dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/bg_white_radius"
+            android:gravity="center"
+            android:text="进入专区"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_13" />
+
+
+    </RelativeLayout>
+</layout>

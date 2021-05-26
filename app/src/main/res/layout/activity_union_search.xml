@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.UnionSearchActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.UnionSearchActivity"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back_grey"
+                android:background="@color/transparent"
+                android:layout_marginRight="@dimen/dp_10"
+                app:clickview="@{(view)->activity.clickExit(view)}" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_frame"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/sertch_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/search_f"
+                    android:drawableLeft="@mipmap/search_small"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:hint="搜商品标题  先领券再购买"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/color_999999"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/txt_size_12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/iv_clear_search" />
+
+                <ImageButton
+                    android:id="@+id/iv_clear_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/dp_8"
+                    android:src="@mipmap/ic_delete"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:contentDescription="TODO" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="13dp"
+                android:paddingRight="16dp"
+                android:text="搜索"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_size_13"
+                app:clickview="@{(view)->activity.clickSearch(view)}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:orientation="horizontal">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_13"
+                android:textColor="@color/color_999999"
+                android:text="搜索渠道" />
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_Male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@drawable/selector_btn_radio"
+                    android:text="淘宝" />
+
+                <RadioButton
+                    android:id="@+id/rb_FeMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/selector_btn_radio"
+                    android:text="京东" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

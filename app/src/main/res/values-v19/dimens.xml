@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="d_50">50dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="status_bar_height_img_heght">303dp</dimen>
+    <dimen name="d_6">6dp</dimen>
+</resources>

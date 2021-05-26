@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_black_10radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_17"
+                android:text="支付选择"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_15"/>
+            
+            <ImageView
+                android:id="@+id/im_wechat"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="@dimen/dp_72"
+                android:src="@drawable/wechat_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_50"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝支付"
+                android:textSize="@dimen/txt_size_14"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="51dp"
+                android:layout_below="@+id/im_wechat"/>
+
+            <ImageView
+                android:id="@+id/im_alipay"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="@dimen/dp_72"
+                android:src="@drawable/alipay_icon"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_50"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信支付"
+                android:textSize="@dimen/txt_size_14"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginLeft="59dp"
+                android:layout_below="@+id/im_wechat"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.BankAdminActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            android:background="@color/color_343434"
+            app:title="申请认证"
+            app:titleColor="@color/white"
+            app:leftIcon="@mipmap/back_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_c1c1c1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    style="@style/txt_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="银行卡号" />
+
+                <EditText
+                    android:id="@+id/edt_bankcard"
+                    style="@style/edit_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textSize="@dimen/txt_size_16"
+                    android:layout_weight="1"
+                    android:hint="请输入银行卡号" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_c1c1c1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    style="@style/txt_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开户人" />
+
+                <EditText
+                    android:id="@+id/edt_open_account"
+                    style="@style/edit_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginLeft="34.5dp"
+                    android:textSize="@dimen/txt_size_16"
+                    android:layout_weight="1"
+                    android:hint="请输入开户人信息" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_c1c1c1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    style="@style/txt_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="开户银行" />
+
+                <EditText
+                    android:id="@+id/edt_open_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/btn_null2_common"
+                    android:textSize="@dimen/txt_size_16"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_c1c1c1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    style="@style/txt_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="支行名称" />
+
+                <EditText
+                    android:id="@+id/edt_bankname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/btn_null2_common"
+                    android:textSize="@dimen/txt_size_16"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:background="@drawable/btn_common"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="保存"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30"
+                app:clickview="@{(view)->activity.clickBtnSave(view)}" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

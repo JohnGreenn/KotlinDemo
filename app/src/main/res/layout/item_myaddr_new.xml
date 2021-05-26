@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ShopAddressActivity" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.AddressDetailBean" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/bg_shadow"
+        app:clickview='@{(view)->activity.OnClick(view,positon)}'>
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/bg_red_3radius"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_7"
+            android:paddingBottom="@dimen/dp_4"
+            android:text="家"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_12"
+            android:visibility='@{data.tag_type==0?View.INVISIBLE:View.VISIBLE}'
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text='@{data.name??"",default="--"}'
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_14"
+            android:maxLines="1"
+            android:maxEms="10"
+            android:ellipsize="end"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:text='@{data.mobile??"",default="--"}'
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_13"
+            app:layout_constraintLeft_toRightOf="@+id/txt2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@id/txt4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text='@{"地址："+data.province+data.city+data.district+data.addr??"",default="--"}'
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_12"
+            app:layout_constraintTop_toBottomOf="@+id/txt2"
+            tools:ignore="MissingConstraints"
+            tools:text="地址" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cb_default_address"
+            style="@style/address_checkbox_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:drawableLeft='@{data.is_default==1?@drawable/jifen_sel:@drawable/jifen_unsel,default=@drawable/jifen_unsel}'
+            android:drawablePadding="@dimen/dp_5"
+            android:text='@{data.is_default==1?"默认地址":"设为默认地址",default="设为默认地址"}'
+            android:textColor='@{data.is_default==1?@color/color_FF4A4D:@color/color_999999,default=@color/color_999999}'
+            android:textSize="@dimen/txt_size_13"
+            app:layout_constraintLeft_toLeftOf="@id/txt4"
+            app:layout_constraintTop_toBottomOf="@id/txt4" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@mipmap/addr_edit"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/txt_size_13"
+            app:clickview="@{(view)->click.toEditAdress(view,data.id,data.name,data.mobile,data.province,data.city,data.district,data.addr,data.tag_type,data.is_default,data.tag_type)}"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_default_address"
+            app:layout_constraintRight_toLeftOf="@+id/tv_del"
+            app:layout_constraintTop_toTopOf="@+id/cb_default_address" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@mipmap/addr_delete"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/txt_size_13"
+            app:clickview="@{(view)->activity.onClick(view,data.id,data.tag_type)}"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_default_address"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cb_default_address" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

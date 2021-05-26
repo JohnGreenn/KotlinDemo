@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="click"
+            type="ClickUtil" />
+
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:lineVisible="false"
+            app:title="退货退款" />
+
+        <View
+            style="@style/HorizontalLineStyle"
+            android:layout_gravity="bottom" />
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_f3f3f3"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/item_img"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_empty"
+                    app:imgmoren="@{@drawable/bg_empty}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/dp_5"/>
+
+
+
+                <com.example.myapplication.view.MytextView
+                    style="@style/ReturnTextviewStyle"
+                    android:id="@+id/tv_title"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="防嗮霜隔离新升级--兰芝新款紫色雪纱丝柔修颜隔离霜"
+                    app:layout_constraintLeft_toRightOf="@+id/item_img"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/item_img" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f2f2f2"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:padding="@dimen/dp_4"
+                    app:layout_constraintLeft_toRightOf="@+id/item_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/item_img"
+                    >
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/ReturnTextviewStyle"
+                        android:text="尺寸：100X100" />
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/ReturnTextviewStyle"
+                        android:layout_gravity="bottom"
+                        android:text="颜色分类：苹果绿" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_10"
+                >
+
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:layout_alignParentLeft="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="退货方式" />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="请选择"
+                    android:drawableRight="@mipmap/goods_enter"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:padding="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_10"
+                >
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="退款原因"
+                    android:padding="@dimen/dp_10"
+                    android:layout_alignParentLeft="true"
+                    />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="请选择"
+                    android:drawableRight="@mipmap/goods_enter"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:padding="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:padding="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_jine"
+                    style="@style/ReturnTextviewStyle"
+                    android:text="退款金额："
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="¥198.89"
+                    app:layout_constraintLeft_toRightOf="@id/tv_jine"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="不可修改，最多¥198.89,含发货邮费"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_jine"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginTop="@dimen/dp_10"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_10"
+                >
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="退款说明："
+                    android:padding="@dimen/dp_10"
+                    />
+                <com.hjq.widget.view.ClearEditText
+                    android:id="@+id/et_reasons"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="选填"
+                    android:includeFontPadding="false"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:inputType="textVisiblePassword"
+                    android:padding="10dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/txt_size_13"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp_10"
+                >
+                <TextView
+                    android:id="@+id/tv_evident"
+                    style="@style/ReturnTextviewStyle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="上传凭证"
+                    />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    android:text="（最多三张）"
+                    app:layout_constraintLeft_toRightOf="@id/tv_evident"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/color_999999"
+                    />
+
+
+                <ImageView
+                    style="@style/ReturnTextviewStyle"
+                    android:src="@mipmap/ic_add_photo"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_evident"
+                    android:layout_margin="@dimen/dp_10"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

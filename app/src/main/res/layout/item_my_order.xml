@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.hpkj.sheplive.fragment.OrderFragment" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.AllOrderBean.DataBean" />
+
+        <variable
+            name="data2"
+            type="com.hpkj.sheplive.entity.AllOrderBean" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="type"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:text='@{"订单号："+data.order_no??"",default="订单号：--"}'
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="待发货"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13" />
+        </LinearLayout>
+
+        <!--中间的商品信息-->
+        <LinearLayout
+            android:id="@+id/sp_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pay_frame_half">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_pay_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text='@{"¥"+data.goods_price+"",default="¥0"}'
+                android:textColor="@color/color_fd4f00"
+                android:textSize="@dimen/txt_size_16"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_pay_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="合计："
+                android:textColor="@color/color_7D7D7D"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintRight_toLeftOf="@+id/tv_pay_price"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/color_e6e6e6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pay_price" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--待付款-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:visibility="@{type==0?View.VISIBLE:View.GONE,default=visible}"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_myorder_cancel"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_white_common"
+                android:text="取消订单"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_myorder_pay"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_common"
+                android:text="付款"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                app:clickview="@{(view)->fragment.btnPayClick(view,data.goods_id,data.goods_price)}" />
+        </LinearLayout>
+
+        <!--待发货-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:visibility="@{type==1?View.VISIBLE:View.GONE,default=visible}"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_contact"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_white_common"
+                android:text="联系卖家"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                android:visibility="visible"
+                app:clickview="@{(view)->fragment.btnClick(view,data.id)}" />
+
+            <Button
+                android:id="@+id/btn_apply_refund"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_common"
+                android:text="申请退款"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!--待收货-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:visibility="@{type==2?View.VISIBLE:View.GONE,default=visible}"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/btn_cancel_receiptorder"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_white_common"
+                android:text="申请退款"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_see_wuliu"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_white_common"
+                android:text="查看物流"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                app:clickview="@{(view)->fragment.btnWLClick(view,data.id)}" />
+
+
+            <Button
+                android:id="@+id/btn_confirm_receiptorder"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_common"
+                android:text="确定收货"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13"
+                app:clickview="@{(view)->fragment.btnConfirm(view,data.uid,data.id)}" />
+        </LinearLayout>
+
+        <!--待评价-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_comment"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_common"
+                android:text="评价"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13" />
+        </LinearLayout>
+
+        <!--交易关闭-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/order_delete"
+                style="@style/btnMyorder"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/btn_common"
+                android:text="删除订单"
+                android:textColor="@color/color_343434"
+                android:textSize="@dimen/txt_size_13" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

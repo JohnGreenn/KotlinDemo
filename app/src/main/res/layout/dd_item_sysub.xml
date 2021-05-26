@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.SubSYBean" />
+
+        <variable
+            name="data2"
+            type="com.hpkj.sheplive.entity.SubSYBean.GoodsBean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_to_orderdetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:background="@color/color_f2f2f2">
+
+        <ImageView
+            android:id="@+id/iv_pay_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:src="@drawable/bg_empty"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="TODO" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:ellipsize="end"
+            android:maxEms="14"
+            android:maxLines="1"
+            android:text='@{data2.title??"",default="--"}'
+            android:textColor="@color/color_343434"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_pay_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_item_myorder_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="25dp"
+            android:text='@{"¥"+data2.price,default="¥---"}'
+            android:textColor="@color/color_343434"
+            android:textSize="@dimen/txt_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_pay_img" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text='@{"X"+data2.total+"",default="X1"}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.SettingActivity" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="casize"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.hjq.bar.TitleBar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_top_height"
+                android:paddingLeft="2dp"
+                app:lineColor="@color/color_eeeeee"
+                app:lineSize="1px"
+                app:lineVisible="true"
+                app:title="@string/setting_title" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_setting_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                app:bar_leftText="@string/myinvitation"
+                tools:bar_rightHint="@string/invitation_hint" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_setting_aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="@string/about_us"
+                app:bar_lineColor="@color/color_eeeeee"
+                app:bar_lineSize="1px"
+                app:bar_lineVisible="true"
+                app:bar_rightIcon="@mipmap/goods_enter"
+                app:clickview="@{(view)->click.enterAboutMe(view)}" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="修改密码"
+                app:bar_lineColor="@color/color_eeeeee"
+                app:bar_lineSize="1px"
+                app:bar_lineVisible="true"
+                app:bar_rightIcon="@mipmap/goods_enter"
+                app:clickview="@{(view)->click.toModifyPass(view)}" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_setting_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="@string/setting_cache"
+                app:bar_lineColor="@color/color_eeeeee"
+                app:bar_lineSize="1px"
+                app:bar_lineVisible="true"
+                app:bar_rightIcon="@drawable/ico_go_black"
+                app:clickview="@{(view)->activity.clearCache(view)}" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/ll_check_versionName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="@string/version_code"
+                app:bar_lineColor="@color/color_eeeeee"
+                app:bar_lineSize="1px"
+                app:bar_lineVisible="true"
+                app:bar_rightText="V3.0.5" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/ll_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="@string/check_update"
+                app:bar_lineColor="@color/color_eeeeee"
+                app:bar_lineSize="1px"
+                app:bar_lineVisible="true"
+                app:clickview="@{(view)->activity.clearCache(view)}" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/ll_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="推荐好友"
+                app:bar_rightIcon="@drawable/ico_go_black"
+                app:clickview="@{(view)->activity.clearCache(view)}" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/ll_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftColor="@color/color_343434"
+                app:bar_leftText="本账号"
+                app:bar_rightText="--"
+                app:bar_rightColor="@color/color_666666"/>
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_setting_exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:bar_leftColor="@color/color_FF0000"
+                app:bar_leftText="@string/setting_exit"
+                app:clickview="@{(view)->activity.clearCache(view)}" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/center_line"
+                android:autoLink="all"
+                android:text="服务协议"
+                android:textColor="@color/color_bedfef"
+                app:clickview="@{(view)->click.enterH5(view,2)}" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/center_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="|"
+                android:textColor="@color/color_bedfef" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/center_line"
+                android:autoLink="all"
+                android:text="隐私协议"
+                android:textColor="@color/color_bedfef"
+                app:clickview="@{(view)->click.enterH5(view,3)}" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

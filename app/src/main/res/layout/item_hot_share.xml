@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--当前登录用户返佣比例-->
+        <variable
+            name="tgfy"
+            type="Float" />
+
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.HotShareSpBean" />
+
+<!--        <variable-->
+<!--            name="jddata"-->
+<!--            type="com.hpkj.sheplive.entity.SimilarSkuListBean" />-->
+
+        <variable
+            name="type"
+            type="Integer" />
+
+        <variable
+            name="fragment"
+            type="com.hpkj.sheplive.activity.HotShareActivity" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <import type="android.text.Html" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/bg_white_10radius"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_7"
+        android:paddingTop="16dp"
+        android:paddingRight="@dimen/dp_7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ri_tou"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_icon"
+                app:riv_oval="true" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@+id/ri_tou"
+                android:text="奢品堂"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_13" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="7dp"
+                android:text="@{data.published_time}"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/txt_size_12" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{data.user_type==0?"#淘宝#":data.user_type==1?"#天猫#":"#京东#"}'
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:maxLines="1"
+                android:text='@{data.category_name}'
+                android:textColor="@color/color_1A1A1A"
+                android:textSize="@dimen/txt_size_13"
+                tools:text="--" />
+        </LinearLayout>
+
+        <com.example.myapplication.view.LollipopFixedWebView
+            android:id="@+id/article_webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            tools:ignore="WebViewLayout" />
+
+        <com.assionhonty.lib.assninegridview.AssNineGridView
+            android:id="@+id/angv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            app:angv_gridSpace="5dp"
+            app:angv_maxSize="9"
+            app:angv_singleImgRatio="1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@color/color_F4F5F7"
+            android:visibility="gone">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:text='@{data.post_comment,default=""}'
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_15" />
+
+            <Button
+                android:id="@+id/btn_copy_link"
+                android:layout_width="64dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/tv_hint"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/color_FF4A4D"
+                android:text="复制评论"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_12"
+                app:clickview="@{(view)->fragment.fu(view,data.post_comment)}" />
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sp_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_grey_5radius"
+            android:paddingLeft="@dimen/dp_7"
+            android:paddingTop="7dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="@dimen/dp_7"
+            app:clickview="@{(view)->fragment.btnClick(view,data)}">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_recommand_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_empty"
+                app:imgmoren="@{@drawable/bg_empty}"
+                app:layout_constraintLeft_toRightOf="@+id/checkbox"
+                app:riv_corner_radius="5dp"
+                app:riv_mutate_background="true"
+                app:url="@{data.pict_url}"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:paddingRight="@dimen/dp_10"
+                android:text='@{data.title}'
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintLeft_toRightOf="@id/iv_recommand_pic"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_recommand_pic"
+                tools:text="--" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="17.5dp"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@mipmap/share_coupon"
+                android:visibility='@{!data.coupon_amount.equals("0")?View.VISIBLE:View.GONE,default=visible}'
+                app:layout_constraintLeft_toRightOf="@id/iv_recommand_pic"
+                app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:text="券"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_12" />
+
+                <com.example.myapplication.view.MytextView
+                    android:id="@+id/tv_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:paddingLeft="2dp"
+                    android:text='@{"¥"+data.coupon_amount}'
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_13"
+                    tools:text="0" />
+
+
+            </LinearLayout>
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/share_get"
+                android:layout_width="wrap_content"
+                android:layout_height="17.5dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_coupon_pink"
+                android:padding="2dp"
+                android:text='@{" 分享赚¥"+click.hotfxz(data)}'
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_11"
+                android:visibility="visible"
+                app:layout_constraintLeft_toRightOf="@id/ll_coupon"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:text=" 分享赚¥0.00" />
+
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:drawablePadding="3dp"
+                android:text="¥"
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/iv_recommand_pic" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/sc_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:drawablePadding="3dp"
+                android:text='@{data.after_price}'
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/rmb"
+                tools:text="0.00" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/share_btn_see"
+                android:gravity="center"
+                android:text="去看看"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_three_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="21dp"
+            android:visibility="visible">
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/btn_sava_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="37dp"
+                android:background="@drawable/border_red_12radius"
+                android:paddingLeft="9.5dp"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="9.5dp"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="保存图片"
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_14"
+                app:clickview="@{(view)->fragment.btnClick(view,data)}" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/btn_only_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@drawable/border_red_12radius"
+                android:paddingLeft="9.5dp"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="9.5dp"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="复制文案"
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_14"
+                app:clickview="@{(view)->fragment.btnClick(view,data)}" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/btn_only_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="37dp"
+                android:background="@drawable/border_red_12radius"
+                android:paddingLeft="9.5dp"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="9.5dp"
+                android:paddingBottom="@dimen/dp_5"
+                android:text='@{data.user_type==0||data.user_type==1?"复制口令":"复制链接",default="复制口令"}'
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="@dimen/txt_size_14"
+                app:clickview="@{(view)->fragment.btnUrlClick(view,data)}"/>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.util.ArrayList" />
+
+        <variable
+            name="alldata"
+            type="ArrayList&lt;com.hpkj.sheplive.entity.ShopOrderListBean.OrderDetailBean>" />
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ShopCommentsMultiPushActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_EAE8E8"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            style="@style/new_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_18"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    android:id="@+id/comment_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物流服务"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/txt_size_12"
+                    android:layout_marginLeft="@dimen/dp_18" />
+
+                <RatingBar
+                    android:id="@+id/comment_sta2"
+                    style="@style/foodRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="1.0"
+                    android:layout_toRightOf="@+id/comment_txt2"
+                    android:layout_marginLeft="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    android:id="@+id/comment_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务态度"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/txt_size_12"
+                    android:layout_marginLeft="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_18" />
+
+                <RatingBar
+                    android:id="@+id/comment_sta3"
+                    style="@style/foodRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="1.0"
+                    android:layout_toRightOf="@+id/comment_txt3"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:layout_marginLeft="13dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_40">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_comment_push"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/dp_40"
+                android:text="发布"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_red"
+                android:textSize="@dimen/txt_size_15"
+                android:textColor="@color/white"
+                app:clickview='@{(view)->activity.btnPushClick(view)}' />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

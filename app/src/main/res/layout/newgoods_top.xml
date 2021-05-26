@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.NewgoodsActivity" />
+
+
+        <!--        <variable-->
+        <!--            name="sort"-->
+        <!--            type="Integer" />-->
+
+        <!--        <variable-->
+        <!--            name="type"-->
+        <!--            type="Integer" />-->
+
+        <variable
+            name="ph"
+            type="com.hpkj.sheplive.entity.PhEntity" />
+
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp">
+
+
+        <!--        搜索条件-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_5radius"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <com.example.myapplication.view.MytextView
+                    android:id="@id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="27dp"
+                    android:drawableRight="@drawable/small_down_arrow"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="最新上架"
+                    android:textColor="@{ph.sortType==-1?@color/color_CCFF4A4D:@color/color_666666,default=@color/color_666666}"
+                    android:textSize="@dimen/txt_size_13" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:tag="0">
+
+                <com.example.myapplication.view.MytextView
+                    android:id="@id/txt_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@{ph.sortType==1&amp;&amp;ph.sort==1?@drawable/small_up_arrow:@drawable/small_down_arrow,default=@drawable/small_down_arrow}"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="销量"
+                    android:textColor="@{ph.sortType==1?@color/color_CCFF4A4D:@color/color_666666,default=@color/color_666666}"
+                    android:textSize="@dimen/txt_size_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:tag="0">
+
+                <com.example.myapplication.view.MytextView
+                    android:id="@id/txt_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@{ph.sortType==2&amp;&amp;ph.sort==1?@drawable/small_up_arrow:@drawable/small_down_arrow,default=@drawable/small_down_arrow}"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="价格"
+                    android:textColor="@{ph.sortType==2?@color/color_CCFF4A4D:@color/color_666666,default=@color/color_666666}"
+                    android:textSize="@dimen/txt_size_13" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

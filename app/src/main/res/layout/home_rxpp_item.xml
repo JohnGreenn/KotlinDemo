@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="click"
+            type="ClickUtil" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.SpecialAreaBean" />
+
+        <!--当前登录用户返佣比例-->
+        <variable
+            name="yjbl"
+            type="Float" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:clickview='@{(view)->click.enterGoodsList(view,0,data.areaName,data.id)}'>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="106dp"
+            android:layout_height="132dp"
+            android:background="@drawable/pp_txt_bg">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_icon"
+                app:imgmoren="@{@drawable/bg_empty}"
+                app:riv_corner_radius="10dp"
+                app:url="@{data.image0}" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@{data.areaName}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="标题" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:background="@color/color_4A4A4A" />
+
+    </LinearLayout>
+
+</layout>

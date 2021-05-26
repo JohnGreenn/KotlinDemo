@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_363636"
+        tools:context=".activity.ImageActivity">
+
+        <com.example.myapplication.view.PhotoViewPager
+            android:id="@+id/vp_image_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.rd.PageIndicatorView
+            android:id="@+id/pv_image_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            app:piv_animationType="scale"
+            app:piv_dynamicCount="true"
+            app:piv_interactiveAnimation="true"
+            app:piv_padding="5dp"
+            app:piv_radius="5dp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_savepic"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="保存"-->
+<!--            android:background="@null"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_gravity="bottom|right"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:layout_marginRight="16dp" />-->
+
+    </FrameLayout>
+</layout>

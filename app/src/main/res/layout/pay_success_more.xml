@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/up_half_circle"
+            android:layout_marginLeft="31.5dp"/>
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/mtv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="更多推荐"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_14" />
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:title="关于我们" />
+
+        <ImageView
+            android:id="@+id/iv_QRcode"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:src="@mipmap/xiazai"
+            android:contentDescription="TODO" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_13"
+            android:textColor="@color/color_999999"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="35dp"
+            android:text="扫码下载奢品堂App" />
+
+        <com.hjq.widget.layout.SettingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftColor="@color/color_343434"
+            app:bar_rightIcon="@mipmap/goods_enter"
+            app:bar_leftText="隐私协议"
+            app:clickview="@{(view)->click.enterH5(view,3)}" />
+
+    </LinearLayout>
+</layout>

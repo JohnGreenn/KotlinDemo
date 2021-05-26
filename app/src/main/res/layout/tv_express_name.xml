@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5">
+
+    <com.example.myapplication.view.MytextView
+        android:id="@+id/express_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_express_background"
+        android:paddingLeft="7dp"
+        android:paddingTop="3dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="3dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="快递名称"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp" />
+
+    </LinearLayout>
+</layout>

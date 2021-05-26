@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.fragment.ReturnGoodsListFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2"
+        >
+
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:id="@+id/lv_shop_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/no_order_data"
+            android:visibility="gone" />
+    </RelativeLayout>
+    </LinearLayout>
+</layout>

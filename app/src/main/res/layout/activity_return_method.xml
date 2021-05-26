@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.hpkj.sheplive.utils.ClickUtil" />
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.ShopOrderListBean" />
+        <variable
+            name="click"
+            type="ClickUtil" />
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ReturnGoodsMethodActivity" />
+
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:lineVisible="false"
+            app:title="申请退款" />
+
+        <View
+            style="@style/HorizontalLineStyle"
+            android:layout_gravity="bottom" />
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/color_f3f3f3"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_80" />
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/item_img"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_empty"
+                    app:imgmoren="@{@drawable/bg_empty}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/dp_5"
+                    app:url="@{data.orderDetail.get(0).goodsImage}"
+                    />
+
+
+
+                <com.example.myapplication.view.MytextView
+                    style="@style/ReturnTextviewStyle"
+                    android:layout_width="0dp"
+                    android:id="@+id/tv_title"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{data.orderDetail.get(0).goodsName}"
+                    app:layout_constraintLeft_toRightOf="@+id/guideline"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/item_img" />
+
+                <LinearLayout
+                    android:id="@+id/ll_spec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f2f2f2"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:padding="@dimen/dp_4"
+                    app:layout_constraintLeft_toRightOf="@+id/guideline"
+                    app:layout_constraintBottom_toBottomOf="@+id/item_img"
+                    >
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/ReturnTextviewStyle"
+                        android:text="@{data.orderDetail.get(0).skuDesc}"
+                        />
+
+                    <com.example.myapplication.view.MytextView
+                        style="@style/ReturnTextviewStyle"
+                        android:layout_gravity="bottom"
+                        android:visibility="gone"
+                        android:text="颜色分类：苹果绿" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:padding="@dimen/dp_10"
+                app:clickview="@{(view)->click.toReturnonlyMoney(view,data,1)}"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_return_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@mipmap/ic_return_money"
+                    android:layout_margin="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/tv_return_money"
+                    style="@style/ReturnTextviewStyle"
+                    app:layout_constraintLeft_toRightOf="@id/iv_return_money"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="@dimen/dp_10"
+                    android:text="我要退款（无需退货）"
+                    />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    app:layout_constraintLeft_toRightOf="@id/iv_return_money"
+                    app:layout_constraintTop_toBottomOf="@id/tv_return_money"
+                    android:textColor="@color/color_999999"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:text="没收到货,或与商家协商同意不用退货只退款"
+                    />
+
+                <ImageView
+                    style="@style/ReturnTextviewStyle"
+                    android:src="@mipmap/goods_enter"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:padding="@dimen/dp_10"
+                app:clickview="@{(view)->click.toReturnonlyMoney(view,data,2)}"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_return_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@mipmap/ic_return_goods_method"
+                    android:layout_margin="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/tv_return_goods"
+                    style="@style/ReturnTextviewStyle"
+                    app:layout_constraintLeft_toRightOf="@id/iv_return_goods"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="@dimen/dp_10"
+                    android:text="我要退货退款"
+                    />
+                <TextView
+                    style="@style/ReturnTextviewStyle"
+                    app:layout_constraintLeft_toRightOf="@id/iv_return_goods"
+                    app:layout_constraintTop_toBottomOf="@id/tv_return_goods"
+                    android:textColor="@color/color_999999"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:text="已收到货，需要退还收到的货物"
+                    />
+
+                <ImageView
+                    style="@style/ReturnTextviewStyle"
+                    android:src="@mipmap/goods_enter"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

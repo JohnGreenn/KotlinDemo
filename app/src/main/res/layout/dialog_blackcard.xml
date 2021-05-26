@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="yuan"
+            type="String" />
+
+        <variable
+            name="type"
+            type="Integer" />
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.VipCardActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_black1"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_22"
+                android:text="转赠失败!"
+                android:textColor="#7E5622"
+                android:textSize="@dimen/txt_size_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:text="失败原因"
+                android:textColor="#7E5622"
+                android:textSize="@dimen/txt_size_13" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dp_18"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="@dimen/dp_18"
+                android:text="@{yuan}"
+                android:textColor="#7E5622"
+                android:textSize="@dimen/txt_size_13"
+                tools:text="您输入的手机号尚未注册奢品堂APP，快去邀请TA注册吧！" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/zz_error_zc"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/bg_7e5622_radius"
+                android:gravity="center"
+                android:text='@{type==0?"确定":"分享注册",default="确定"}'
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_13"
+                app:clickview="@{(view)->activity.onClick(view)}" />
+
+
+        </LinearLayout>
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_message_cancel"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@mipmap/pop_black3"
+            app:clickview="@{(view)->activity.onClick(view)}" />
+    </LinearLayout>
+</layout>

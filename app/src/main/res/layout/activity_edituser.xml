@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.EditUserActivity" />
+
+        <variable
+            name="sex"
+            type="Integer" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_EAE8E8"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:lineColor="@color/color_eeeeee"
+            app:lineSize="1dp"
+            app:lineVisible="true"
+            app:title="编辑资料"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@id/txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:hint="昵称"
+            android:minEms="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/color_999999"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/txt_size_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="性别"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/txt_size_12" />
+
+            <RadioGroup
+                android:id="@id/txt_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@id/txt_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/radio_button"
+                    android:button="@null"
+                    android:checked="@{sex==0?true:false}"
+                    android:gravity="center"
+                    android:tag="0"
+                    android:text="男"
+                    android:textColor="@drawable/radio_txt_color"
+                    app:clickview="@{(view)->activity.saveInfo(view)}" />
+
+                <RadioButton
+                    android:id="@id/txt_3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/radio_button"
+                    android:button="@null"
+                    android:checked="@{sex==1?true:false}"
+                    android:gravity="center"
+                    android:tag="1"
+                    android:text="女"
+                    android:textColor="@drawable/radio_txt_color"
+                    app:clickview="@{(view)->activity.saveInfo(view)}" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/btn_saveinfo"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_17"
+            android:background="@drawable/btn_red_20radius"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_14"
+            app:clickview="@{(view)->activity.saveInfo(view)}" />
+
+    </LinearLayout>
+</layout>

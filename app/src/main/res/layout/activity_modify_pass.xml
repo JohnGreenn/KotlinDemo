@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ModifyPassActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ffeae8e8"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:lineColor="@color/color_eeeeee"
+            app:lineSize="1px"
+            app:lineVisible="true"
+            app:title="修改密码"
+            app:titleColor="@color/color_333333"
+            app:titleSize="@dimen/txt_size_16" />
+
+
+        <com.hjq.widget.view.PasswordEditText
+            android:id="@+id/et_find_password"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="输入原密码（6-18个字符之间）"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/txt_size_12" />
+
+        <View style="@style/HorizontalLineStyle" />
+
+        <com.hjq.widget.view.PasswordEditText
+            android:id="@+id/et_register_password2"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="输入新密码（6-18个字符之间）"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/txt_size_12" />
+
+        <View style="@style/HorizontalLineStyle" />
+
+        <com.hjq.widget.view.PasswordEditText
+            android:id="@+id/et_register_password3"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="再次输入新密码（6-18个字符之间）"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/txt_size_12" />
+
+        <View style="@style/HorizontalLineStyle" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sure"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/btn_red_20radius"
+            android:text="@string/common_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_14"
+            app:clickview="@{(view)->activity.onClick(view)}" />
+    </LinearLayout>
+</layout>

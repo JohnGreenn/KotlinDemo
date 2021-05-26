@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.YgsyBean2.DataBean.GoodsListBean" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data2"
+            type="com.hpkj.sheplive.entity.YgsyBean2.DataBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/order_img"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:contentDescription="TODO"
+                android:src="@drawable/bg_empty"
+                app:riv_corner_radius="3dp" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="130dp"
+                android:layout_toRightOf="@+id/order_img"
+                android:maxLines="2"
+                android:text='@{data.item_title,default="--"}'
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_size_12" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_txt1"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="8.5dp"
+                android:layout_toRightOf="@+id/order_img"
+                android:text='@{"¥"+data2.alipay_total_price,default="¥0.00"}'
+                android:textColor="@color/color_FF4A4E"
+                android:textSize="@dimen/sp_12" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_ygsr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toRightOf="@+id/txt2"
+                android:text="付款预估"
+                android:textColor="@color/color_FF4A4E"
+                android:textSize="@dimen/txt_size_12" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ygsr"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="11.5dp"
+                android:text='@{"+"+data2.pub_share_pre_fee+"",default=0.00}'
+                android:textColor="@color/color_FF4A4D"
+                android:textSize="19sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

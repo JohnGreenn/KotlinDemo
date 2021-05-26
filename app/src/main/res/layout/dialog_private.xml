@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dialog_message_round_size"
+        app:cardElevation="0px"
+        tools:context="com.hpkj.sheplive.dialog.MessageDialog">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <com.hjq.widget.view.SmartTextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="标题" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_message_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:maxLines="9"
+                android:lineSpacingExtra="6dp"
+                android:textColor="@color/color_5D5D5D"
+                android:textSize="12sp"
+                android:text="请务必审慎阅读，充分理解“服务协议”和“隐私政策”各项条款，包括但不限于：为了向你提供内容分享等服务，我们需要收集你的操作日志等个人信息。你可以在“设置”中查看，变更，删除个人信息并管理你的授权。你可阅读《服务协议》和《隐私政策》了解详细信息。如你同意，请点击“同意”开始接受我们的服务。" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ECECEC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <com.hjq.widget.view.SmartTextView
+                    android:id="@+id/tv_message_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/common_cancel"
+                    android:textColor="@color/color_333333"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/v_message_line"
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_ECECEC" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_message_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/common_confirm"
+                    android:textColor="@color/color_FF4A4D"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.CashRecordBean.DataBean" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/item_tx_bg"
+        android:paddingBottom="12dp">
+
+        <com.example.myapplication.view.MytextView
+            android:id="@id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_toRightOf="@+id/tv_txt2"
+            android:text='@{"¥"+data.amount+"元",default="¥0.00元"}'
+            android:textColor="@color/color_FF0000"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="14dp"
+            android:maxLines="1"
+            android:text='@{"提现日期："+data.create_time,default="提现日期：2020-02-12 12:19:00"}'
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="@id/txt_1"
+            app:layout_constraintTop_toBottomOf="@id/txt_1"
+            tools:ignore="MissingConstraints" />
+
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_txstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="11dp"
+            android:text="提现失败"
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_txt1"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/tv_txstatus"
+            android:text='@{"失败原因:"+data.remarks,default="失败原因"}'
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_txt1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_txt1"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

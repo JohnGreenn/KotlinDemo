@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中状态 -->
+    <item android:drawable="@color/color_FF4A4E" android:state_checked="true" />
+
+    <!-- 默认状态 -->
+    <item android:drawable="@drawable/shape_address" android:state_checked="false" />
+
+
+</selector>

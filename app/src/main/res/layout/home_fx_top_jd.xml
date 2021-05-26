@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.hpkj.sheplive.fragment.JDHomeFXFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/home_banner"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@null"
+            app:image_scale_type="fit_xy"
+            app:layout_collapseMode="parallax"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_bigicon"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_taobao"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:clickview="@{(view)->fragment.btnClick(view)}">
+
+                <ImageView
+                    style="@style/home_ico_style"
+                    android:background="@mipmap/ico_jd2" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:text="京东"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tmao"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:clickview="@{(view)->fragment.btnClick(view)}">
+
+                <ImageView
+                    style="@style/home_ico_style"
+                    android:background="@mipmap/ico_tm2" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:text="天猫"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_hot_share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:clickview="@{(view)->fragment.btnClick(view)}">
+
+                <ImageView
+                    style="@style/home_ico_style"
+                    android:background="@mipmap/hot_share" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:text="爆款分享"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_gaoyong"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:clickview="@{(view)->fragment.btnClick(view)}">
+
+                <ImageView
+                    style="@style/home_ico_style"
+                    android:background="@mipmap/icon_gy2" />
+
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:text="高佣"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_cheap"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:clickview="@{(view)->fragment.btnClick(view)}">
+
+                <ImageView
+                    style="@style/home_ico_style"
+                    android:background="@mipmap/ico_99" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:text="9.9包邮"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

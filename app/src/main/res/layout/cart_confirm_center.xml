@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ShopCartConfirmOrderActivity" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.GwcGoodsListBean2.GoodsListBean" />
+
+        <variable
+            name="data2"
+            type="com.hpkj.sheplive.entity.GwcGoodsListBean.ShopInfoBean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/goods_img"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/dp_17"
+            android:src="@drawable/bg_empty"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/goods_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="@dimen/dp_17"
+            android:maxLength="13"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text='@{data.goodName,default="--"}'
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_13"
+            app:layout_constraintLeft_toRightOf="@+id/goods_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:padding="1dp"
+            android:text='@{data.skuName,default="--"}'
+            android:textColor="@color/color_555555"
+            android:textSize="@dimen/txt_size_12"
+            android:visibility='@{data.skuName.equals("")?View.GONE:View.VISIBLE}'
+            app:layout_constraintLeft_toRightOf="@+id/goods_img"
+            app:layout_constraintTop_toBottomOf="@+id/goods_title" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:text='@{"¥"+data.priceVip,default="--"}'
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/txt_size_12"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.myapplication.view.MytextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:text='@{"X"+data.count,default="--"}'
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/txt_size_12"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

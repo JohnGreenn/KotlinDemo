@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.ShowCommentsActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:lineVisible="false"
+            app:title="评论列表" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_one"
+                style="@style/radiobtncomment"
+                android:text="全部"
+                android:layout_marginRight="@dimen/dp_10"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio_two"
+                style="@style/radiobtncomment"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="好评" />
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                style="@style/radiobtncomment"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="差评" />
+
+            <RadioButton
+                android:id="@+id/radio_four"
+                style="@style/radiobtncomment"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="有图" />
+
+        </RadioGroup>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/commentviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

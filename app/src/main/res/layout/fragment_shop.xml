@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageButton
+                android:id="@+id/ib_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:background="@color/transparent"
+                android:src="@mipmap/info_detail"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shop_search_frame"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_toRightOf="@id/ib_info"
+                android:background="@drawable/search_bg_red_15radius"
+                android:drawableLeft="@mipmap/search_small2"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_12"
+                android:text="请输入关键词"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/txt_size_10"
+                app:clickview="@{(view)->click.enterSearchActivity(view,2)}" />
+
+        </RelativeLayout>
+
+<!--        <View style="@style/HLineShadow" />-->
+
+        <com.hpkj.sheplive.widget.ImgTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            app:indicatorBgResId="@mipmap/half_circle"
+            app:indicatorHeight="20dp"
+            app:indicatorWidth="30dp"
+            app:mTextColorDef="@color/color_666666"
+            app:mTextColorSelect="@color/color_d81e07"
+            app:textSize="13sp"
+            app:innerLeftMargin="@dimen/dp_16"
+            app:innerRightMargin="@dimen/dp_16"
+            app:viewHeight="17dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </LinearLayout>
+</layout>

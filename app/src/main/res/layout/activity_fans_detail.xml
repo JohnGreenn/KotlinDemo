@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.FansDetailBean.UserInfoBean" />
+
+        <variable
+            name="data2"
+            type="com.hpkj.sheplive.entity.FansDetailBean.FansBean" />
+
+        <variable
+            name="data3"
+            type="com.hpkj.sheplive.entity.FansDetailBean.IncomesBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.FansDetailActivity">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:title="粉丝明细" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@mipmap/fans_bg">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/rimg_tou"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                app:riv_corner_radius="360dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/bg_circle_white"
+                android:src="@mipmap/my_tou"
+                app:imgmoren="@{@drawable/my_tou}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:url='@{data.avatar}' />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/sy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text='@{data.nickname,default="--"}'
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_18"
+                app:layout_constraintLeft_toRightOf="@+id/rimg_tou"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/sy_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:text='@{data.mobile,default="--"}'
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_13"
+                app:layout_constraintLeft_toRightOf="@+id/rimg_tou"
+                app:layout_constraintTop_toBottomOf="@+id/sy_name" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:text='@{data.create_time,default="--"}'
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_12"
+                app:layout_constraintLeft_toRightOf="@+id/sy_code"
+                app:layout_constraintTop_toBottomOf="@+id/sy_name" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_jifen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:text='@{"邀请人"+data.parent,default="--"}'
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_12"
+                app:layout_constraintLeft_toRightOf="@+id/rimg_tou"
+                app:layout_constraintTop_toBottomOf="@+id/sy_code" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="@dimen/dp_18"
+            android:background="@drawable/bg_shadow"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/color_333333"
+                    android:text='@{data3.paid_today.income+"",default="-"}'
+                    android:textSize="@dimen/txt_size_12" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="今日预估"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text='@{data3.paid_this_month.income+"",default="-"}'
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_12" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="本月预估"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text='@{data2.all+"",default="-"}'
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_12" />
+
+                <com.example.myapplication.view.MytextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="TA的粉丝"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/txt_size_11" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.dialog.ShopOrderDialog.Builder" />
+
+        <variable
+            name="pid"
+            type="Integer" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.SpecificationsListBean.ValuesBean" />
+
+        <variable
+            name="dq"
+            type="Integer" />
+
+        <variable
+            name="zong"
+            type="Integer" />
+    </data>
+
+    <com.example.myapplication.view.MytextView
+        android:id="@+id/order_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:background="@{data.ky?(data.xz?@drawable/order_bg_sel:@drawable/order_bg_no2):@drawable/order_bg_not_use,default=@drawable/order_bg_no2}"
+        android:clickable="@{data.ky?true:false,default=false}"
+        android:padding="@dimen/dp_6"
+        android:text='@{data.specificationsName??"",default="名称"}'
+        android:textColor="@{data.ky?(data.xz?@color/white:@color/color_333333):@color/white,default=@color/color_333333}"
+        android:textSize="@dimen/txt_size_13"
+        android:layout_marginLeft="@dimen/dp_1"
+        app:clickview="@{(view)->click.onClick(view,dq,zong,pid,data.id)}" />
+</layout>

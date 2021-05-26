@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.hpkj.sheplive.fragment.SubShowCommentsFragment" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.ShowCommentsBean.ListBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/item_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/bg_empty"
+                android:contentDescription="TODO" />
+
+            <RatingBar
+                style="@style/foodRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating='@{data.level,default=5}'
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/item_comments_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/item_head"
+                android:text='@{data.nickname??"",default="--"}'
+                android:textSize="@dimen/sp_16" />
+
+            <com.example.myapplication.view.MytextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/item_head"
+                android:layout_below="@+id/item_comments_name"
+                android:text='@{data.createtime??"",default="--"}'
+                android:textSize="@dimen/txt_size_10" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/item_comments_contents"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_11"
+                android:layout_below="@+id/item_head"
+                android:layout_marginLeft="45dp"
+                android:text='@{data.content??"",default="--"}' />
+
+            <ImageView
+                android:id="@+id/item_comments_pic"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/bg_empty"
+                android:layout_below="@+id/item_comments_contents"
+                android:contentDescription="TODO" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

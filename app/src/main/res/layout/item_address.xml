@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.MyAddressActivity" />
+
+        <variable
+            name="positon"
+            type="Integer" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.AddressListBean.DataBean" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text='@{data.name??"",default="--"}'
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_18"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text='@{data.mobile??"",default="--"}'
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_18"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.view.MytextView
+            android:id="@+id/tv_detail_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text='@{data.province+data.city+data.district+data.addr??"",default="--"}'
+            android:textColor="@color/light_gray2"
+            android:textSize="@dimen/txt_size_13"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address_name"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_c1c1c1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_address"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cb_default_address"
+            style="@style/address_checkbox_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:drawableLeft='@{data.is_default==1?@drawable/xuanzhong:@drawable/weixuanz,default=@drawable/weixuanz}'
+            android:drawablePadding="@dimen/dp_5"
+            android:text="默认地址"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/btn_white_common"
+            android:text="删除"
+            android:textSize="@dimen/txt_size_13"
+            app:clickview="@{(view)->activity.btnClick(view,data.id)}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/btn_white_common"
+            android:text="编辑"
+            android:textSize="@dimen/txt_size_13"
+            app:layout_constraintRight_toLeftOf="@+id/btn_delete"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

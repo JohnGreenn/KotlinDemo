@@ -1,0 +1,139 @@
+<resources>
+    <string name="register" translatable="false">注册</string>
+    <string name="common_name" translatable="false">奢品堂</string>
+    <string name="QRname" translatable="false">邀请码</string>
+    <!--    <string name="item_kx_stock"><![CDATA[<font color="@color/color_999999">%1$s</font><font color="%2$s">&nbsp;%3$s&nbsp;&nbsp;</font>]]></string>-->
+    <string name="item_kx_stock" translatable="false"><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%1$s]]></string>
+
+    <!-- 通用的 -->
+
+    <string name="common_code_send" translatable="false">获取验证码</string>
+
+    <string name="common_permission_hint" translatable="false">请先授予权限</string>
+    <string name="common_permission_fail" translatable="false">授权失败，请手动授予权限</string>
+
+    <string name="common_loading" translatable="false">加载中&#8230;</string>
+
+    <string name="common_confirm" translatable="false">确定</string>
+    <string name="common_agree" translatable="false">同意</string>
+    <string name="see_detail" translatable="false">查看详情</string>
+    <string name="common_cancel" translatable="false">取消</string>
+
+    <!-- 地区对话框 -->
+    <string name="address_title" translatable="false">请选择地区</string>
+    <string name="address_hint" translatable="false">请选择</string>
+
+    <!-- 日期对话框 -->
+
+    <!-- 时间对话框 -->
+
+    <!-- 升级对话框 -->
+
+    <string name="update_download_fail" translatable="false">启动下载失败</string>
+    <string name="update_permission_hint" translatable="false">必须先要授予权限才能正常下载更新哦</string>
+
+    <string name="update_status_running" translatable="false">下载中</string>
+    <string name="update_status_successful" translatable="false">立即安装</string>
+    <string name="update_status_failed" translatable="false">下载失败</string>
+    <string name="update_status_paused" translatable="false">暂停中</string>
+    <string name="update_status_pending" translatable="false">等待下载</string>
+
+    <!-- 分享对话框 -->
+    <string name="share_title" translatable="false">分享到&#8230;</string>
+
+    <string name="share_platform_wechat" translatable="false">微信</string>
+    <string name="share_platform_moment" translatable="false">朋友圈</string>
+    <string name="share_platform_qq" translatable="false">QQ</string>
+    <string name="share_platform_qzone" translatable="false">QQ空间</string>
+    <string name="share_platform_link" translatable="false">复制链接</string>
+
+    <string name="share_platform_copy_hint" translatable="false">已复制到剪贴板</string>
+
+    <!-- 支付密码对话框 -->
+
+    <!-- 提示 -->
+    <string name="hint_layout_no_data" translatable="false">亲，暂无数据</string>
+    <string name="hint_layout_error_request" translatable="false">亲，请求出错了</string>
+    <string name="hint_layout_error_network" translatable="false">亲，没有网络了</string>
+
+    <!-- 主页 -->
+    <string name="home_nav_index" translatable="false">首页</string>
+    <string name="home_nav_sy" translatable="false">成功案例</string>
+    <string name="home_nav_sc" translatable="false">分类</string>
+    <string name="home_nav_bc" translatable="false">优惠券</string>
+    <string name="home_nav_me" translatable="false">我的</string>
+
+    <!-- 登录 -->
+
+    <!-- 注册 -->
+    <string name="register_password_hint2" translatable="false">请再次输入密码 选填</string>
+
+    <!-- 设置 -->
+    <string name="setting_title" translatable="false">设置</string>
+
+    <string name="invitation_hint" translatable="false">123456</string>
+
+    <string name="setting_cache" translatable="false">清空缓存</string>
+    <string name="setting_exit" translatable="false">退出登录</string>
+
+    <!-- 关于 -->
+
+    <!-- 忘记密码 -->
+
+    <!-- 重置密码 -->
+
+    <!-- 校验手机号 -->
+
+    <!-- 修改手机号 -->
+
+    <!-- 个人资料 -->
+    <string name="personal_data_title" translatable="false">个人资料</string>
+    <string name="personal_data_head" translatable="false">头像</string>
+
+    <string name="personal_data_name" translatable="false">昵称</string>
+    <string name="personal_data_qm_hint" translatable="false">签名</string>
+
+    <!-- 浏览器 -->
+
+    <!-- 异常捕捉 -->
+
+    <!-- 图片选择 -->
+    <string name="photo_title" translatable="false">图片选择</string>
+    <string name="photo_all" translatable="false">所有图片</string>
+
+    <string name="photo_total" translatable="false">共 %d 张</string>
+
+    <string name="photo_max_hint" translatable="false">本次最多只能选择 %d 张图片</string>
+
+    <string name="photo_launch_fail" translatable="false">无法启动相机</string>
+    <string name="photo_picture_error" translatable="false">图片错误</string>
+
+    <string name="myinvitation" translatable="false">邀请码</string>
+    <string name="about_us" translatable="false">关于我们</string>
+    <string name="version_code" translatable="false">版本号</string>
+    <string name="check_update" translatable="false">检查更新</string>
+
+    <string name="seartch_edit_txt" translatable="false">请输入商品名称</string>
+
+    <string name="my_address_txt" translatable="false">我的收货地址</string>
+    <string name="add_address_txt" translatable="false">添加新地址</string>
+    <string name="my_favorite_txt" translatable="false">我的收藏</string>
+
+    <string name="error_missing_appid_rsa_private" translatable="false">Error: Missing \"APPID\" or \"RSA_PRIVATE\" in PayDemoActivity.</string>
+    <string name="alipay_sdk_version_is" translatable="false">"Alipay SDK version: "</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="pay_success" translatable="false">支付成功</string>
+    <string name="pay_failed" translatable="false">支付失败</string>
+
+    <string name="auth_success" translatable="false">Authentication success:</string>
+    <string name="auth_failed" translatable="false">Authentication failed:</string>
+    <string name="yzm_login">验证码登录</string>
+    <string name="psw_login">密码登录</string>
+    <string name="other_login">第三方登录</string>
+    <string name="getcheckcode">获取验证码</string>
+    <string name="register_password_hint1">输入密码（6-18个字符之间）选填</string>
+
+    <string name="link_line"><u>去看看 ></u></string>
+    <string name="ljgm">立即购买</string>
+
+</resources>

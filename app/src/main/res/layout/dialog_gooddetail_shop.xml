@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dialog"
+            type="com.hpkj.sheplive.dialog.ShopGooddetailDialog.Builder" />
+
+        <variable
+            name="data"
+            type="com.hpkj.sheplive.entity.ShopGoodsDetailBean.BaseInfoBean" />
+
+        <import type="java.util.ArrayList" />
+
+        <variable
+            name="pricedata"
+            type="ArrayList&lt;com.hpkj.sheplive.entity.SPOptionsBean>" />
+
+        <variable
+            name="ggdata"
+            type="ArrayList&lt;com.hpkj.sheplive.entity.SPSpecsBean>" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:paddingBottom="10dp">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/dialog_pic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/bg_empty"
+                app:riv_corner_radius="8dp"
+                app:imgmoren="@{@drawable/bg_empty}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/gs_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="@dimen/txt_size_15"
+                android:text='@{"¥ "+data.price,default="¥0.00"}'
+                android:textColor="@color/color_FF4A4D"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_pic"
+                tools:ignore="MissingConstraints" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@mipmap/dialog_close"
+                app:layout_constraintRight_toRightOf="parent"
+                app:clickview="@{(view)->dialog.onClick(view)}"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/sp_group_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_pic"
+                tools:ignore="MissingConstraints">
+
+            </LinearLayout>
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/dialog_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="10dp"
+                android:text="购买数量"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_size_13"
+                app:layout_constraintTop_toBottomOf="@id/sp_group_linear"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_reduce"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_f4f4f4"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="—"
+                android:textColor="@color/color_676767"
+                android:textSize="18sp"
+                android:layout_marginLeft="2.5dp"
+                app:clickview="@{(view)->dialog.onClick(view)}"
+                app:layout_constraintRight_toLeftOf="@id/tv_num"
+                app:layout_constraintTop_toBottomOf="@id/sp_group_linear"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/tv_num"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_f4f4f4"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:padding="@dimen/dp_10"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:text='@{data.priNum+"",default="1"}'
+                android:textColor="@color/color_676767"
+                android:textSize="15sp"
+                app:layout_constraintRight_toLeftOf="@id/tv_add"
+                app:layout_constraintTop_toBottomOf="@id/sp_group_linear"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_add"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:background="@color/color_f4f4f4"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="+"
+                android:textColor="@color/color_676767"
+                android:textSize="15sp"
+                app:clickview="@{(view)->dialog.onClick(view)}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_group_linear"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/sp_sy_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="1dp"
+                android:paddingBottom="6dp"
+                android:text='@{"剩余"+data.stock+"件",default="剩余999件"}'
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/txt_size_11"
+                app:layout_constraintTop_toBottomOf="@id/dialog_txt1"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            style="@style/red_line"
+            android:layout_marginBottom="38dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_buy_now"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@color/color_FF4A4D"
+                android:text="确定"
+                android:textSize="@dimen/txt_size_15"
+                app:clickview="@{(view)->dialog.onClick(view)}" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

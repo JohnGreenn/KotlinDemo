@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hpkj.sheplive.activity.SubCategoryActivity" />
+
+
+        <variable
+            name="sel"
+            type="Integer" />
+
+        <variable
+            name="up"
+            type="Boolean" />
+
+        <variable
+            name="click"
+            type="com.hpkj.sheplive.utils.ClickUtil" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2"
+        android:orientation="vertical">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_top_height"
+            app:title="标题" />
+
+        <LinearLayout
+            android:id="@+id/sertch_lin"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/bg_white_5radius"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_paixu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    app:clickview="@{(view)->activity.btnSearchClick(view)}">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="27dp"
+                        android:text="默认"
+                        android:textColor='@{sel==0?@color/color_FF4A4D:@color/color_333333,default=@color/color_333333}'
+                        android:textSize="@dimen/txt_size_13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/small_down_arrow"
+                        android:visibility='@{sel==0?View.VISIBLE:View.INVISIBLE,default=visible}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_xiaoliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/ll_paixu"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:tag="0"
+                    app:clickview="@{(view)->activity.btnSearchClick(view)}">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="销量"
+                        android:textColor='@{sel==1?@color/color_FF4A4D:@color/color_333333,default=@color/color_333333}'
+                        android:textSize="@dimen/txt_size_13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="1.5dp"
+                        android:src='@{click.taobph(sel,up,1)?@drawable/small_down_arrow:@drawable/small_up_arrow}'
+                        android:visibility='@{sel==1?View.VISIBLE:View.INVISIBLE,default=visible}' />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_jiage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/ll_srb"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:tag="0"
+                    app:clickview="@{(view)->activity.btnSearchClick(view)}">
+
+                    <com.example.myapplication.view.MytextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="价格"
+                        android:textColor='@{sel==2?@color/color_FF4A4D:@color/color_333333,default=@color/color_333333}'
+                        android:textSize="@dimen/txt_size_13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="1.5dp"
+                        android:src='@{click.taobph(sel,up,2)?@drawable/small_down_arrow:@drawable/small_up_arrow}'
+                        android:visibility='@{sel==2?View.VISIBLE:View.INVISIBLE,default=visible}' />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/btn_search1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@+id/btn_search2"
+                android:text="优惠券"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_size_13" />
+
+            <Switch
+                android:id="@+id/swbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_12"
+                android:switchMinWidth="20dp"
+                android:thumb="@drawable/switch_ios_thumb"
+                android:track="@drawable/switch_ios_track_selector" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.github.jdsjlzx.recyclerview.LRecyclerView
+                android:id="@+id/lv_search_results"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <include
+                android:id="@+id/empty_view"
+                layout="@layout/not_data_xml"
+                android:visibility="gone" />
+
+            <com.example.myapplication.view.MytextView
+                android:id="@+id/tv_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@color/black"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
