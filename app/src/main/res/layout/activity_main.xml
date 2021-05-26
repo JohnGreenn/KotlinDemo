@@ -6,7 +6,7 @@
 
         <variable
             name="activity"
-            type="com.hpkj.sheplive.activity.MainActivity" />
+            type="com.example.myapplication.activity.MainActivity" />
     </data>
 
     <LinearLayout
@@ -29,9 +29,5 @@
             app:itemTextColor="@drawable/selector_home_navigation_color"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/menu_home_bottom_nav" />
-
-
     </LinearLayout>
-
-
 </layout>

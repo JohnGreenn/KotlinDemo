@@ -135,5 +135,7 @@
 
     <string name="link_line"><u>去看看 ></u></string>
     <string name="ljgm">立即购买</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

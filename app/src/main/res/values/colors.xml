@@ -201,5 +201,10 @@
     <color name="color_ff5283F0">#ff5283F0</color>
     <color name="color_ff00B1FE">#ff00B1FE</color>
     <color name="color_7E5622">#7e5622</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 
 </resources>

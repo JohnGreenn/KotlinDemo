@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.example.myapplication.R
 import com.gyf.immersionbar.ImmersionBar
+import com.zhouyou.http.EasyHttp
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 
@@ -22,10 +23,11 @@ abstract class BaseActivity<T : ViewDataBinding, E> : AppCompatActivity() {
     protected lateinit var binding: T
     protected var mContext: Context? = null
     protected var mDisposable: Disposable? = null;
-    protected var immersionBar: ImmersionBar? = null
+    protected lateinit var immersionBar: ImmersionBar
 
     /*调用字段*/
     protected lateinit var observable: Observable<E>
+    protected var subscription: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,4 +109,12 @@ abstract class BaseActivity<T : ViewDataBinding, E> : AppCompatActivity() {
 
     /*获取数据-----start------*/
     protected open fun getData(isShow: Boolean = false) {}
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        /*取消网络请求*/
+        subscription?.let { EasyHttp.cancelSubscription(subscription) }
+
+    }
 }
