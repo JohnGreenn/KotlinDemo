@@ -27,7 +27,6 @@ import com.assionhonty.lib.assninegridview.AssNineGridView;
 import com.assionhonty.lib.assninegridview.ImageInfo;
 import com.assionhonty.lib.assninegridview.R;
 import com.hjq.permissions.OnPermission;
-
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
 import com.hjq.toast.ToastUtils;

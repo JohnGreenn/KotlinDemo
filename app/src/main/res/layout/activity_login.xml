@@ -12,11 +12,11 @@
 
         <variable
             name="click"
-            type="com.example.myapplication.util.ClickUtil" />
+            type="com.example.util.ClickUtil" />
 
         <variable
             name="activity"
-            type="com.example.myapplication.activity.LoginActivity" />
+            type="com.example.activity.LoginActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -88,7 +88,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="@id/guideline">
 
-            <com.example.myapplication.view.MytextView
+            <com.example.view.MytextView
                 android:id="@+id/tv_checkcodelogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                 android:textSize="@dimen/txt_size_16"
                 app:clickview="@{(view)->activity.onClick(view)}" />
 
-            <com.example.myapplication.view.MytextView
+            <com.example.view.MytextView
                 android:id="@+id/tv_pswlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
             app:layout_constraintRight_toRightOf="@id/guideline3"
             app:layout_constraintTop_toBottomOf="@id/ll_login_other" />
 
-        <com.example.myapplication.view.MytextView
+        <com.example.view.MytextView
             android:id="@+id/tv_register_bu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -327,7 +327,7 @@
             app:layout_constraintRight_toRightOf="@id/guideline3"
             app:layout_constraintTop_toBottomOf="@id/ll_login_btn" />
 
-        <com.example.myapplication.view.MytextView
+        <com.example.view.MytextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"

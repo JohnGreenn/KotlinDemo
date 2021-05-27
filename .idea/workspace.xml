@@ -21,10 +21,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a94e3410-bd69-4f6f-a16f-2de597554024" name="Default Changelist" comment="【KotLin】1">
+    <list default="true" id="a94e3410-bd69-4f6f-a16f-2de597554024" name="Default Changelist" comment="【KotLin】成功案例">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/activity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/activity/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_home_bottom_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_home_bottom_nav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/HomeMyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/HomeMyFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/LibraryLazyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/LibraryLazyFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +38,41 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
         <option value="valueResourceFile" />
-        <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="Kotlin Data Class" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="C:\Program Files\Git\bin\git.exe" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1sBirIDVu9V83ZD4Lmrvk5sbdWm" />
@@ -63,6 +86,8 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-07T02:01:33.577Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-viewC:/Users/Administrator/.gradle/wrapper/dists/gradle-5.6.1-all/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
+    <property name="android-custom-viewC:/Users/Administrator/.gradle/wrapper/dists/gradle-5.6.1-all/caches/modules-2/files-2.1/io.github.elye/loaderviewlibrary/3.0.0/c4a82e85f43980e6f6246e6409e2ed2e7ada3c74/loaderviewlibrary-3.0.0-sources.jar!/com/elyeproj/loaderviewlibrary/LoaderTextView.java_SELECTED" value="LoaderTextView" />
     <property name="android-custom-viewC:/Users/Administrator/.gradle/wrapper/dists/gradle-6.1.1-all/cfmwm155h49vnt3hynmlrsdst/gradle-6.1.1/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_SELECTED" value="MaterialButton" />
     <property name="android-custom-viewC:/Users/Administrator/.gradle/wrapper/dists/gradle-6.1.1-all/cfmwm155h49vnt3hynmlrsdst/gradle-6.1.1/caches/modules-2/files-2.1/com.google.android.material/material/1.3.0-alpha04/c9c4570daee750826144d28959622cef8a626636/material-1.3.0-alpha04-sources.jar!/com/google/android/material/bottomnavigation/BottomNavigationView.java_SELECTED" value="BottomNavigationView" />
     <property name="android-custom-viewC:/Users/Administrator/.gradle/wrapper/dists/gradle-6.1.1-all/cfmwm155h49vnt3hynmlrsdst/gradle-6.1.1/caches/modules-2/files-2.1/com.hjq/titlebar/6.0/6a8a96e8b4800077babe91b1ab7ad0f6ecfc045c/titlebar-6.0-sources.jar!/com/hjq/bar/TitleBar.java_SELECTED" value="TitleBar" />
@@ -80,42 +105,51 @@
     <property name="android-custom-viewE:/Android_studio/kotlin_Project/Demo/widget/src/main/java/com/hjq/widget/layout/SettingBar.java_SELECTED" value="SettingBar" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="android.sdk.path" value="C:/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/example" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="multi-representation-previewC:/Users/Administrator/.gradle/wrapper/dists/gradle-6.1.1-all/cfmwm155h49vnt3hynmlrsdst/gradle-6.1.1/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk15/0.8.3/a0c6e3f93ef23044c97580be5cc33ac71b67a31b/anko-sdk15-0.8.3-sources.jar!/org/jetbrains/anko/Layouts.kt_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/view/ViewGroup.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/widget/LinearLayout.java_selected" value="Custom views" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recommended.upgrade.last.time.stamp" value="1621323491768" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="PsdUISettings">
-    <option name="MODULE_TAB" value="Default Config" />
+    <option name="MODULE_TAB" value="Properties" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.activity" />
       <recent name="com.example.myapplication.activity" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.myapplication.bean" />
     </key>
     <key name="android.template.-406556825">
       <recent name="com.example.myapplication.fragment" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.fragment" />
       <recent name="com.example.myapplication.fragment" />
     </key>
-    <key name="android.template.154191844">
+    <key name="android.template.-668048269">
       <recent name="com.example.myapplication.activity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\drawable-xhdpi" />
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\layout" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.bean" />
+      <recent name="com.example.myapplication.callback" />
+      <recent name="com.example.myapplication.activity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\layout" />
@@ -124,12 +158,11 @@
       <recent name="E:\Android_studio\kotlin_Project\Demo\widget\src\main\res\values" />
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\color" />
     </key>
-    <key name="android.template.-668048269">
+    <key name="android.template.154191844">
       <recent name="com.example.myapplication.activity" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.myapplication.callback" />
-      <recent name="com.example.myapplication.activity" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.myapplication.bean" />
     </key>
   </component>
   <component name="RunManager">
@@ -157,31 +190,8 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_PROFILING_ENABLED" value="false" />
@@ -274,8 +284,172 @@
       <option name="project" value="LOCAL" />
       <updated>1622092182297</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="【KotLin】1">
+      <created>1622092687569</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622092687569</updated>
+    </task>
+    <task id="LOCAL-00011" summary="【KotLin】我的界面">
+      <created>1622093884666</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622093884666</updated>
+    </task>
+    <task id="LOCAL-00012" summary="【KotLin】我的界面">
+      <created>1622094852631</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622094852631</updated>
+    </task>
+    <task id="LOCAL-00013" summary="【KotLin】我的界面">
+      <created>1622179813612</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1622179813612</updated>
+    </task>
+    <task id="LOCAL-00014" summary="【KotLin】我的界面">
+      <created>1622179938064</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622179938064</updated>
+    </task>
+    <task id="LOCAL-00015" summary="【KotLin】我的界面">
+      <created>1622194588985</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1622194588985</updated>
+    </task>
+    <task id="LOCAL-00016" summary="【KotLin】我的界面">
+      <created>1622428660790</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1622428660790</updated>
+    </task>
+    <task id="LOCAL-00017" summary="【KotLin】我的界面">
+      <created>1622438197854</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1622438197854</updated>
+    </task>
+    <task id="LOCAL-00018" summary="【KotLin】我的界面">
+      <created>1622439637974</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1622439637974</updated>
+    </task>
+    <task id="LOCAL-00019" summary="【KotLin】我的界面">
+      <created>1622441297389</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1622441297389</updated>
+    </task>
+    <task id="LOCAL-00020" summary="【KotLin】我的界面">
+      <created>1622441524757</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1622441524757</updated>
+    </task>
+    <task id="LOCAL-00021" summary="【KotLin】我的界面">
+      <created>1622442389693</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1622442389693</updated>
+    </task>
+    <task id="LOCAL-00022" summary="【KotLin】我的界面">
+      <created>1622444919061</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1622444919061</updated>
+    </task>
+    <task id="LOCAL-00023" summary="【KotLin】我的界面">
+      <created>1622450564149</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1622450564149</updated>
+    </task>
+    <task id="LOCAL-00024" summary="【KotLin】我的界面">
+      <created>1622453075462</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622453075462</updated>
+    </task>
+    <task id="LOCAL-00025" summary="【KotLin】我的界面">
+      <created>1622455422282</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1622455422282</updated>
+    </task>
+    <task id="LOCAL-00026" summary="【KotLin】我的界面">
+      <created>1622455932925</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1622455932925</updated>
+    </task>
+    <task id="LOCAL-00027" summary="【KotLin】我的界面">
+      <created>1622455950648</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1622455950648</updated>
+    </task>
+    <task id="LOCAL-00028" summary="【KotLin】我的界面">
+      <created>1622456446521</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1622456446521</updated>
+    </task>
+    <task id="LOCAL-00029" summary="【KotLin】成功案例">
+      <created>1622511742590</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1622511742590</updated>
+    </task>
+    <task id="LOCAL-00030" summary="【KotLin】成功案例">
+      <created>1622513594156</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1622513594156</updated>
+    </task>
+    <task id="LOCAL-00031" summary="【KotLin】成功案例">
+      <created>1622525714106</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1622525714106</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -291,137 +465,195 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="【KotLin】奢品堂项目 基础代码" />
+    <MESSAGE value="【KotLin】登录及首页" />
     <MESSAGE value="【KotLin】1" />
-    <option name="LAST_COMMIT_MESSAGE" value="【KotLin】1" />
+    <MESSAGE value="【KotLin】我的界面" />
+    <MESSAGE value="【KotLin】我的界面" />
+    <MESSAGE value="【KotLin】成功案例" />
+    <MESSAGE value="【KotLin】成功案例" />
+    <option name="LAST_COMMIT_MESSAGE" value="【KotLin】成功案例" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="278" y="236" width="1335" height="651" key="#PSD" timestamp="1622079182641">
+    <state x="187" y="295" width="1377" height="676" key="#PSD" timestamp="1622441725796">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1598" y="286" key="#PSD/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620802785500" />
-    <state x="278" y="236" width="1335" height="651" key="#PSD/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622079182641" />
+    <state x="278" y="236" width="1335" height="651" key="#PSD/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622109654573" />
+    <state x="187" y="295" width="1377" height="676" key="#PSD/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622441725796" />
     <state x="668" y="317" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1622019269653">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="668" y="317" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622019269653" />
-    <state x="686" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1622019305765">
+    <state x="686" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1622445529140">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="686" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622019305765" />
-    <state x="734" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1622086876719">
+    <state x="686" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622445529140" />
+    <state x="734" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1622525439232">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1186" y="256" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620804483447" />
     <state x="734" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1080@0.0.1920.1050" timestamp="1620958964580" />
     <state x="734" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086876719" />
+    <state x="734" y="256" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622525439232" />
     <state x="640" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1621320221454">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="640" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1621320221454" />
+    <state x="518" y="441" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622096309126">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="518" y="441" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622096309126" />
     <state x="602" y="379" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1622016201251">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="602" y="379" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622016201251" />
+    <state x="602" y="396" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1622096310867">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="602" y="396" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622096310867" />
     <state x="751" y="193" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1621330858565">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="751" y="193" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1621330858565" />
-    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622016092159">
+    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622455352579">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1230" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620353035356" />
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622016092159" />
-    <state x="726" y="313" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1621321491749">
+    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622455352579" />
+    <state x="726" y="313" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1622452003804">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="726" y="313" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1621321491749" />
+    <state x="726" y="313" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622096256902" />
+    <state x="726" y="313" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622452003804" />
     <state x="715" y="141" key="#xdebugger.evaluate" timestamp="1621410583386">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="715" y="141" key="#xdebugger.evaluate/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1621410583386" />
+    <state x="700" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1622189134324">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="700" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622189134324" />
     <state x="750" y="280" key="AndroidCreateXmlResourceDialog" timestamp="1622021396936">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="750" y="280" key="AndroidCreateXmlResourceDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622021396936" />
-    <state x="473" y="3" key="CommitChangelistDialog2" timestamp="1622092650684">
+    <state x="473" y="3" key="CommitChangelistDialog2" timestamp="1622797808382">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="473" y="3" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622092650684" />
-    <state x="735" y="266" key="FileChooserDialogImpl" timestamp="1622014494714">
+    <state x="473" y="3" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622094850189" />
+    <state x="473" y="3" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622797808382" />
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1622441178684">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622441178684" />
+    <state x="1067" y="300" key="FileChooserDialogImpl" timestamp="1622453105991">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="735" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622014494714" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom" timestamp="1622086280344">
+    <state x="1067" y="300" key="FileChooserDialogImpl/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622453105991" />
+    <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1622511820486">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622092773637" />
+    <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622511820486" />
+    <state width="1877" height="444" key="GridCell.Tab.0.bottom" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
+    <state width="1877" height="444" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.0.center" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783065" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
+    <state width="1877" height="444" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.0.left" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783065" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
+    <state width="1877" height="444" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.0.right" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783066" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.1.bottom" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
+    <state width="1877" height="444" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658655" />
     <state width="1876" height="265" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
-    <state width="1877" height="294" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.1.center" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.1.center" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
-    <state width="1877" height="294" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.1.left" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
+    <state width="1877" height="444" key="GridCell.Tab.1.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.1.left" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
-    <state width="1877" height="294" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state width="1877" height="294" key="GridCell.Tab.1.right" timestamp="1622086280344">
+    <state width="1877" height="385" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
+    <state width="1877" height="444" key="GridCell.Tab.1.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state width="1877" height="444" key="GridCell.Tab.1.right" timestamp="1622775434837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658655" />
     <state width="1876" height="265" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
-    <state width="1877" height="294" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622086280344" />
-    <state x="248" y="171" width="1249" height="711" key="SettingsEditor" timestamp="1622079813437">
+    <state width="1877" height="385" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
+    <state width="1877" height="444" key="GridCell.Tab.1.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
+    <state x="683" y="143" key="RollbackChangesDialog" timestamp="1622511567188">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="683" y="143" key="RollbackChangesDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622511567188" />
+    <state x="248" y="171" width="1249" height="711" key="SettingsEditor" timestamp="1622449388979">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1459" y="184" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620802961350" />
     <state x="-1185" y="205" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1080@0.0.1920.1050" timestamp="1620886031546" />
-    <state x="248" y="171" width="1249" height="711" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622079813437" />
-    <state width="528" height="519" key="SwitcherDM" timestamp="1622092158350">
+    <state x="248" y="171" width="1249" height="711" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622109551283" />
+    <state x="248" y="171" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622449388979" />
+    <state width="528" height="519" key="SwitcherDM" timestamp="1622453086132">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="528" height="519" key="SwitcherDM/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622092158350" />
-    <state x="510" y="127" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1622083389099">
+    <state width="528" height="519" key="SwitcherDM/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097759902" />
+    <state width="528" height="519" key="SwitcherDM/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622453086132" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1622445587484">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622445587484" />
+    <state x="759" y="302" key="chooseDestDirectoryDialog" timestamp="1622096243852">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="759" y="302" key="chooseDestDirectoryDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622096243852" />
+    <state x="510" y="127" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1622439521377">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="510" y="127" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622083389099" />
-    <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1622083505797">
+    <state x="510" y="127" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622439521377" />
+    <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1622524742142">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622083505797" />
-    <state x="663" y="247" width="594" height="650" key="find.popup" timestamp="1622018323913">
+    <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622524742142" />
+    <state x="726" y="241" width="766" height="740" key="find.popup" timestamp="1622525149160">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1257" y="247" width="594" height="586" key="find.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620800161447" />
-    <state x="663" y="247" width="594" height="650" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622018323913" />
+    <state x="663" y="247" width="766" height="650" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097842365" />
+    <state x="726" y="241" width="766" height="740" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622525149160" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1622082990093">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -447,10 +679,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="781" y="291" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1621926077783" />
-    <state x="616" y="192" width="672" height="676" key="search.everywhere.popup" timestamp="1622091909648">
+    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup" timestamp="1622797708926">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1304" y="192" width="672" height="676" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620800217134" />
-    <state x="616" y="192" width="672" height="676" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622091909648" />
+    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097167504" />
+    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622797708926" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.1-all/caches/modules-2/files-2.1/com.zhouyou/rxeasyhttp/2.1.5/6e05ef8e11293e988d7e27bf8228dd3e1d6efb53/rxeasyhttp-2.1.5-sources.jar!/com/zhouyou/http/interceptor/HttpLoggingInterceptor.java</url>
+          <line>176</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

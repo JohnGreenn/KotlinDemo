@@ -6,7 +6,7 @@
 
         <variable
             name="activity"
-            type="com.example.myapplication.activity.MainActivity" />
+            type="com.example.activity.MainActivity" />
     </data>
 
     <LinearLayout
