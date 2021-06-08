@@ -1,14 +1,13 @@
 package com.example.interceptor
 
-import android.util.Log
-import android.widget.Toast
+import com.example.confi.MyApplication.Companion.encryptedPreferences
 import com.zhouyou.http.interceptor.BaseDynamicInterceptor
-import com.zhouyou.http.interceptor.GzipRequestInterceptor
+import okhttp3.Interceptor
+import okhttp3.Response
 import java.util.*
-import kotlin.math.log
 
 /**
- * 描述：
+ * 描述：自定义参数拦截器
  * fileName：com.example.interceptor
  * author：Hujm
  * 添加版本：V4.2.12
@@ -16,9 +15,8 @@ import kotlin.math.log
  */
 public class CustomSignInterceptor : BaseDynamicInterceptor<CustomSignInterceptor>() {
     override fun dynamic(dynamicMap: TreeMap<String, String>): TreeMap<String, String> {
-        Log.i("cc", "dd")
+        val token = encryptedPreferences?.getString("token", "")
+        token?.let { dynamicMap.put("token", it) }
         return dynamicMap;
     }
-
-
 }

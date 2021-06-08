@@ -2,21 +2,20 @@ package com.example.activity
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.view.View
-import android.widget.Toast
 import com.example.R
 import com.example.activity.HttpUtile.Companion.executeCusB
 import com.example.bean.InfoBean
 import com.example.confi.MyApplication.Companion.encryptedPreferences
 import com.example.databinding.ActivityLoginBinding
+import com.example.interceptor.MyBaseSubscriber
 import com.example.util.ClickUtil
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.zhouyou.http.EasyHttp
-import com.zhouyou.http.exception.ApiException
 import com.zhouyou.http.model.HttpParams
-import com.zhouyou.http.subsciber.BaseSubscriber
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
@@ -27,7 +26,7 @@ import kotlinx.android.synthetic.main.activity_login.*
  * 时间：2021/5/26 0026 16:53
  */
 
-class LoginActivity : BaseActivity<ActivityLoginBinding, InfoBean>() {
+class LoginActivity(context: Context?) : BaseActivity<ActivityLoginBinding, InfoBean>() {
     override fun getContentViewId(): Int {
         return R.layout.activity_login
     }
@@ -80,11 +79,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, InfoBean>() {
             .params(params)
 //            .addInterceptor(CustomSignInterceptor())
             .executeCusB(InfoBean::class.java);
-        observable.subscribe(object : BaseSubscriber<InfoBean>() {
-            override fun onError(e: ApiException) {
-                Toast.makeText(this@LoginActivity, e.message, Toast.LENGTH_LONG).show()
-            }
-
+        observable.subscribe(object : MyBaseSubscriber<InfoBean>(this) {
             @SuppressLint("CheckResult")
             override fun onNext(infoBean: InfoBean) {
                 val rxPermissions = RxPermissions(this@LoginActivity)

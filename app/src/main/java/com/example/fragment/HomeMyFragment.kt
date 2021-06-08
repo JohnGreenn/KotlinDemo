@@ -1,15 +1,11 @@
 package com.example.fragment
 
-import android.widget.Toast
 import com.example.R
 import com.example.activity.HttpUtile.Companion.executeCusB
 import com.example.bean.UserData
-import com.example.confi.MyApplication
-import com.example.confi.MyApplication.Companion.encryptedPreferences
 import com.example.databinding.FragmentHomeMyBinding
+import com.example.interceptor.MyBaseSubscriber
 import com.zhouyou.http.EasyHttp
-import com.zhouyou.http.exception.ApiException
-import com.zhouyou.http.subsciber.BaseSubscriber
 
 
 /**
@@ -29,7 +25,7 @@ class HomeMyFragment : LibraryLazyFragment<FragmentHomeMyBinding, UserData>() {
             return
         }
         userLogin()
-        mHasLoadedOnce = true
+//        mHasLoadedOnce = true
     }
 
     override fun initBundleData() {
@@ -41,13 +37,9 @@ class HomeMyFragment : LibraryLazyFragment<FragmentHomeMyBinding, UserData>() {
 
     private fun userLogin() {
         observable = EasyHttp.post("/v2/jiekou/myUc")
-            .headers("token", encryptedPreferences?.getString("token", ""))
+//            .headers("token", encryptedPreferences?.getString("token", ""))
             .executeCusB(UserData::class.java)
-        observable.subscribe(object : BaseSubscriber<UserData>() {
-            override fun onError(e: ApiException) {
-                Toast.makeText(activity, e.message, Toast.LENGTH_LONG).show()
-            }
-
+        observable.subscribe(object : MyBaseSubscriber<UserData>(activity) {
             override fun onNext(data: UserData) {
                 binding.data = data
             }

@@ -2,11 +2,11 @@ package com.example.confi
 
 import android.app.Application
 import com.example.BuildConfig
+import com.example.interceptor.CustomSignInterceptor
 import com.google.gson.Gson
 import com.pddstudio.preferences.encrypted.EncryptedPreferences
 import com.zhouyou.http.EasyHttp
-import com.zhouyou.http.model.HttpHeaders
-import okhttp3.logging.HttpLoggingInterceptor
+import com.zhouyou.http.interceptor.HttpLoggingInterceptor
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
@@ -41,7 +41,8 @@ open class MyApplication : Application() {
             .setReadTimeOut(60 * 1000)
             .setWriteTimeOut(60 * 1000)
             .setConnectTimeout(60 * 1000)
-            .addInterceptor(HttpLoggingInterceptor())
+            .addInterceptor(HttpLoggingInterceptor("log"))
+            .addInterceptor(CustomSignInterceptor())
             /*网络不好时，自动重连次数*/
             .setRetryCount(3)
 //            可以全局统一设置超时重试间隔时间,默认为500ms,不需要可以设置为0

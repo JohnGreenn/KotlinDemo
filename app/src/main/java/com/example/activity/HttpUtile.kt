@@ -33,10 +33,6 @@ open class HttpUtile {
             return execute(object : CallClazzProxy<BaseResult<T>, T>(clazz) {})
         }
 
-//        public fun <T> PostRequest.executeCusB(clazz: Class<T>): Observable<T> {
-//            return execute(object : CallClazzProxy<BaseResult<T>, T>(clazz) {})
-//        }
-
         public fun <T> PostRequest.executeList(type: Type): Observable<T> {
             return execute(object : CallClazzProxy<BaseResult<T>, T>(type) {})
         }
