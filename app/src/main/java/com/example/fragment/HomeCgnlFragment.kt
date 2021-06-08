@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.fragment_home_cgnl.*
  * 添加版本：V3.0.8
  * 时间：2021/5/27 0027 10:58
  */
-public class HomeCgnlFragment :
+ class HomeCgnlFragment :
     RecyclerViewFragment<FragmentHomeCgnlBinding, ArrayList<CgnlBean>, CgnlBean>() {
 
 

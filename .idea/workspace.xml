@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
@@ -21,11 +21,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a94e3410-bd69-4f6f-a16f-2de597554024" name="Default Changelist" comment="【KotLin】成功案例">
+    <list default="true" id="a94e3410-bd69-4f6f-a16f-2de597554024" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/activity/HttpUtile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/activity/HttpUtile.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/confi/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/confi/MyApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/HomeMyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/HomeMyFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/LibraryLazyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/LibraryLazyFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +118,7 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recommended.upgrade.last.time.stamp" value="1621323491768" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Properties" />
@@ -129,22 +130,25 @@
       <recent name="com.example.activity" />
       <recent name="com.example.myapplication.activity" />
     </key>
-    <key name="android.template.-406556825">
-      <recent name="com.example.myapplication.fragment" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.myapplication.bean" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.example.fragment" />
       <recent name="com.example.myapplication.fragment" />
     </key>
-    <key name="android.template.-668048269">
+    <key name="android.template.1979341168">
+      <recent name="com.example" />
+    </key>
+    <key name="android.template.154191844">
       <recent name="com.example.myapplication.activity" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\drawable-xhdpi" />
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\layout" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.bean" />
@@ -158,11 +162,11 @@
       <recent name="E:\Android_studio\kotlin_Project\Demo\widget\src\main\res\values" />
       <recent name="E:\Android_studio\kotlin_Project\Demo\app\src\main\res\color" />
     </key>
-    <key name="android.template.154191844">
+    <key name="android.template.-668048269">
       <recent name="com.example.myapplication.activity" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.myapplication.bean" />
+    <key name="android.template.-406556825">
+      <recent name="com.example.myapplication.fragment" />
     </key>
   </component>
   <component name="RunManager">
@@ -438,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622525714106</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="【KotLin】数据保存优化">
+      <created>1623114387645</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623114387646</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -471,15 +482,16 @@
     <MESSAGE value="【KotLin】我的界面" />
     <MESSAGE value="【KotLin】成功案例" />
     <MESSAGE value="【KotLin】成功案例" />
-    <option name="LAST_COMMIT_MESSAGE" value="【KotLin】成功案例" />
+    <MESSAGE value="【KotLin】数据保存优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="【KotLin】数据保存优化" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="187" y="295" width="1377" height="676" key="#PSD" timestamp="1622441725796">
+    <state x="187" y="295" width="1377" height="676" key="#PSD" timestamp="1623046486599">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1598" y="286" key="#PSD/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620802785500" />
     <state x="278" y="236" width="1335" height="651" key="#PSD/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622109654573" />
-    <state x="187" y="295" width="1377" height="676" key="#PSD/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622441725796" />
+    <state x="187" y="295" width="1377" height="676" key="#PSD/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623046486599" />
     <state x="668" y="317" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1622019269653">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -539,15 +551,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="750" y="280" key="AndroidCreateXmlResourceDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622021396936" />
-    <state x="473" y="3" key="CommitChangelistDialog2" timestamp="1622797808382">
+    <state x="473" y="3" key="CommitChangelistDialog2" timestamp="1623114385507">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="473" y="3" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622094850189" />
-    <state x="473" y="3" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622797808382" />
-    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1622441178684">
+    <state x="473" y="3" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623114385507" />
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1623045745529">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622441178684" />
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623045745529" />
     <state x="1067" y="300" key="FileChooserDialogImpl" timestamp="1622453105991">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -558,73 +570,73 @@
     </state>
     <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622092773637" />
     <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622511820486" />
-    <state width="1877" height="444" key="GridCell.Tab.0.bottom" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.0.bottom" timestamp="1623116655847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
-    <state width="1877" height="444" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.0.center" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655847" />
+    <state width="1877" height="444" key="GridCell.Tab.0.center" timestamp="1623116655846">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783065" />
     <state width="1877" height="385" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
-    <state width="1877" height="444" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.0.left" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655846" />
+    <state width="1877" height="444" key="GridCell.Tab.0.left" timestamp="1623116655846">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783065" />
     <state width="1877" height="385" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
-    <state width="1877" height="444" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.0.right" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655846" />
+    <state width="1877" height="444" key="GridCell.Tab.0.right" timestamp="1623116655847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783066" />
     <state width="1877" height="385" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
-    <state width="1877" height="444" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.1.bottom" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655847" />
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom" timestamp="1623116655847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658655" />
     <state width="1876" height="265" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
-    <state width="1877" height="444" key="GridCell.Tab.1.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.1.center" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655847" />
+    <state width="1877" height="444" key="GridCell.Tab.1.center" timestamp="1623116655847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
-    <state width="1877" height="444" key="GridCell.Tab.1.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.1.left" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.1.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655847" />
+    <state width="1877" height="444" key="GridCell.Tab.1.left" timestamp="1623116655847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
-    <state width="1877" height="444" key="GridCell.Tab.1.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state width="1877" height="444" key="GridCell.Tab.1.right" timestamp="1622775434837">
+    <state width="1877" height="444" key="GridCell.Tab.1.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655847" />
+    <state width="1877" height="444" key="GridCell.Tab.1.right" timestamp="1623116655847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658655" />
     <state width="1876" height="265" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
-    <state width="1877" height="444" key="GridCell.Tab.1.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622775434837" />
-    <state x="683" y="143" key="RollbackChangesDialog" timestamp="1622511567188">
+    <state width="1877" height="444" key="GridCell.Tab.1.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116655847" />
+    <state x="683" y="143" key="RollbackChangesDialog" timestamp="1623046168628">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="683" y="143" key="RollbackChangesDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622511567188" />
-    <state x="248" y="171" width="1249" height="711" key="SettingsEditor" timestamp="1622449388979">
+    <state x="683" y="143" key="RollbackChangesDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623046168628" />
+    <state x="248" y="171" width="1249" height="711" key="SettingsEditor" timestamp="1623047316001">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1459" y="184" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620802961350" />
     <state x="-1185" y="205" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1080@0.0.1920.1050" timestamp="1620886031546" />
     <state x="248" y="171" width="1249" height="711" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622109551283" />
-    <state x="248" y="171" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622449388979" />
+    <state x="248" y="171" key="SettingsEditor/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623047316001" />
     <state width="528" height="519" key="SwitcherDM" timestamp="1622453086132">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -648,12 +660,12 @@
     </state>
     <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622083505797" />
     <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622524742142" />
-    <state x="726" y="241" width="766" height="740" key="find.popup" timestamp="1622525149160">
+    <state x="726" y="241" width="766" height="740" key="find.popup" timestamp="1623114336733">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1257" y="247" width="594" height="586" key="find.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620800161447" />
     <state x="663" y="247" width="766" height="650" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097842365" />
-    <state x="726" y="241" width="766" height="740" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622525149160" />
+    <state x="726" y="241" width="766" height="740" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623114336733" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1622082990093">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -679,12 +691,12 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="781" y="291" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1621926077783" />
-    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup" timestamp="1622797708926">
+    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup" timestamp="1623116372208">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1304" y="192" width="672" height="676" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620800217134" />
     <state x="559" y="217" width="960" height="676" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097167504" />
-    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622797708926" />
+    <state x="559" y="217" width="960" height="676" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116372208" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -693,6 +705,21 @@
           <url>jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.1-all/caches/modules-2/files-2.1/com.zhouyou/rxeasyhttp/2.1.5/6e05ef8e11293e988d7e27bf8228dd3e1d6efb53/rxeasyhttp-2.1.5-sources.jar!/com/zhouyou/http/interceptor/HttpLoggingInterceptor.java</url>
           <line>176</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.1-all/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.1.2/317ca442de605d2e83c2b95d005fc3b1329b3701/logging-interceptor-3.1.2-sources.jar!/okhttp3/logging/HttpLoggingInterceptor.java</url>
+          <line>223</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.1-all/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.1.2/317ca442de605d2e83c2b95d005fc3b1329b3701/logging-interceptor-3.1.2-sources.jar!/okhttp3/logging/HttpLoggingInterceptor.java</url>
+          <line>202</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt</url>
+          <line>129</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

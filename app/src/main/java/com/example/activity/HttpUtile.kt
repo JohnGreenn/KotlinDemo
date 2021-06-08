@@ -16,7 +16,7 @@ import java.lang.reflect.Type
  * 添加版本：V3.0.8
  * 时间：2021/5/27 0027 10:58
  */
-public class HttpUtile {
+open class HttpUtile {
     companion object {
 
         /*添加扩展函数*/
@@ -32,6 +32,10 @@ public class HttpUtile {
         public fun <T> PostRequest.executeCusB(clazz: Class<T>): Observable<T> {
             return execute(object : CallClazzProxy<BaseResult<T>, T>(clazz) {})
         }
+
+//        public fun <T> PostRequest.executeCusB(clazz: Class<T>): Observable<T> {
+//            return execute(object : CallClazzProxy<BaseResult<T>, T>(clazz) {})
+//        }
 
         public fun <T> PostRequest.executeList(type: Type): Observable<T> {
             return execute(object : CallClazzProxy<BaseResult<T>, T>(type) {})

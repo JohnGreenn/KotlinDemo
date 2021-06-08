@@ -9,9 +9,9 @@ import android.widget.Toast
 import com.example.R
 import com.example.activity.HttpUtile.Companion.executeCusB
 import com.example.bean.InfoBean
+import com.example.confi.MyApplication.Companion.encryptedPreferences
 import com.example.databinding.ActivityLoginBinding
 import com.example.util.ClickUtil
-import com.pddstudio.preferences.encrypted.EncryptedPreferences
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.zhouyou.http.EasyHttp
 import com.zhouyou.http.exception.ApiException
@@ -57,7 +57,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, InfoBean>() {
      * -------------------------------
      *
      */
-    open fun onClick(view: View) {
+    fun onClick(view: View) {
         when (view.id) {
             /*登录按钮*/
             R.id.tv_login_bu -> userLogin()
@@ -124,10 +124,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, InfoBean>() {
      *
      */
     fun saveUserInfo(infoBean: InfoBean) {
-        val encryptedPreferences: EncryptedPreferences =
-            EncryptedPreferences.Builder(this).withEncryptionPassword("password")
-                .build()
-        encryptedPreferences.edit().putString("token", infoBean.token).apply()
+//        val encryptedPreferences: EncryptedPreferences =
+//            EncryptedPreferences.Builder(this).withEncryptionPassword("password")
+//                .build()
+        encryptedPreferences?.edit()?.putString("token", infoBean.token)?.apply()
+
         infoBean.let {
             startActivity(
                 Intent(this@LoginActivity, MainActivity::class.java)

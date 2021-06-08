@@ -5,6 +5,7 @@ import com.example.R
 import com.example.activity.HttpUtile.Companion.executeCusB
 import com.example.bean.UserData
 import com.example.confi.MyApplication
+import com.example.confi.MyApplication.Companion.encryptedPreferences
 import com.example.databinding.FragmentHomeMyBinding
 import com.zhouyou.http.EasyHttp
 import com.zhouyou.http.exception.ApiException
@@ -40,7 +41,7 @@ class HomeMyFragment : LibraryLazyFragment<FragmentHomeMyBinding, UserData>() {
 
     private fun userLogin() {
         observable = EasyHttp.post("/v2/jiekou/myUc")
-//            .headers("token", MyApplication.encryptedPreferences?.getString("token", ""))
+            .headers("token", encryptedPreferences?.getString("token", ""))
             .executeCusB(UserData::class.java)
         observable.subscribe(object : BaseSubscriber<UserData>() {
             override fun onError(e: ApiException) {
