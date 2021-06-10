@@ -8,8 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2018/10/18
  * desc   : 验证码倒计时
  */

@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2019/07/06
  * desc   : 自动播放帧动画的 ImageView
  */

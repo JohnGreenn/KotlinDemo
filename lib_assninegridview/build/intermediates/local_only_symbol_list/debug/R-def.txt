@@ -1,0 +1,17 @@
+R_DEF: Internal format may change without notice
+local
+anim fade_in
+anim fade_out
+attr? angv_gridSpace
+attr? angv_maxSize
+attr? angv_singleImgRatio
+drawable ic_default_color
+id btn_savepic
+id pb
+id pv
+id tv_num
+id vp
+layout ass_img_preview_activity
+layout ass_img_preview_item
+string app_name
+styleable AssNineGridView angv_singleImgRatio angv_gridSpace angv_maxSize

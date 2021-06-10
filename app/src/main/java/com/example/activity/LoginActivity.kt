@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.activity_login.*
  * 时间：2021/5/26 0026 16:53
  */
 
-class LoginActivity(context: Context?) : BaseActivity<ActivityLoginBinding, InfoBean>() {
+class LoginActivity : BaseActivity<ActivityLoginBinding, InfoBean>() {
     override fun getContentViewId(): Int {
         return R.layout.activity_login
     }

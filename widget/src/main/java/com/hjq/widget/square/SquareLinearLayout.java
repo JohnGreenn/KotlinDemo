@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2018/10/18
  * desc   : 正方形的 LinearLayout
  */

@@ -13,8 +13,8 @@ import com.hjq.widget.R;
 import java.util.regex.Pattern;
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2019/06/29
  * desc   : 正则输入限制编辑框
  */

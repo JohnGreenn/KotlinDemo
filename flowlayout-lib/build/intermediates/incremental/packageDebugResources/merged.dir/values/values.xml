@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">flowlayout-lib</string>
+    <declare-styleable name="TagFlowLayout">
+        <!--最大选择数量-->
+        <attr format="integer" name="max_select"/>
+        <!--最大可显示行数-->
+        <attr format="integer" name="limit_line_count"/>
+        <!--是否设置多行隐藏-->
+        <attr format="boolean" name="is_limit"/>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1"/>
+            <enum name="center" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

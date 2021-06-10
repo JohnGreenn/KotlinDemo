@@ -25,8 +25,8 @@ import com.hjq.widget.R;
 
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2019/04/20复制
  * desc   : 设置条自定义控件
  */

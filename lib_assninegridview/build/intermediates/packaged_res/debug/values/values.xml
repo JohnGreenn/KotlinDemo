@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">lib_assninegridview</string>
+    <declare-styleable name="AssNineGridView">
+        <attr format="float" name="angv_singleImgRatio"/>
+        <attr format="dimension" name="angv_gridSpace"/>
+        <attr format="integer" name="angv_maxSize"/>
+    </declare-styleable>
+</resources>

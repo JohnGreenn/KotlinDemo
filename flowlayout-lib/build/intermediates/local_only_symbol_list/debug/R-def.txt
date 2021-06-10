@@ -1,0 +1,11 @@
+R_DEF: Internal format may change without notice
+local
+attr? is_limit
+attr? limit_line_count
+attr? max_select
+attr? tag_gravity
+id center
+id left
+id right
+string app_name
+styleable TagFlowLayout max_select limit_line_count is_limit tag_gravity

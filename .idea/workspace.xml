@@ -22,20 +22,249 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a94e3410-bd69-4f6f-a16f-2de597554024" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/interceptor/MyBaseSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/myapplication/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/myapplication/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bintray.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/.transforms/8b6042b05284ab9ef3e90c657cd7145d.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/.transforms/8b6042b05284ab9ef3e90c657cd7145d/classes/classes.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/generated/source/buildConfig/debug/com/zhy/view/flowlayout/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/aar_metadata/debug/aar-metadata.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/compile_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/compile_r_class_jar/debug/R.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/compile_symbol_list/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/FlowLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagAdapter$OnDataChangedListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagFlowLayout$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagFlowLayout$OnLongClickListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagFlowLayout$OnSelectListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagFlowLayout$OnTagClickListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagFlowLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/javac/debug/classes/com/zhy/view/flowlayout/TagView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/local_only_symbol_list/debug/R-def.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/merged_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/navigation_json/debug/navigation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/packaged_manifests/debug/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/runtime_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowlayout-lib/src/androidTest/java/com/zhy/flowlayout_lib/ApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/.transforms/d27389fbefecc30cee52260fa9ddc2c5.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/.transforms/d27389fbefecc30cee52260fa9ddc2c5/classes/classes.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/generated/source/buildConfig/debug/com/assionhonty/lib/assninegridview/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/aar_metadata/debug/aar-metadata.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compile_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compile_r_class_jar/debug/R.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compile_symbol_list/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compiled_local_resources/debug/out/anim_fade_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compiled_local_resources/debug/out/anim_fade_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compiled_local_resources/debug/out/drawable_ic_default_color.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compiled_local_resources/debug/out/layout_ass_img_preview_activity.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/compiled_local_resources/debug/out/layout_ass_img_preview_item.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/AssNineGridView$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/AssNineGridView$ImageLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/AssNineGridView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/AssNineGridViewAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/AssNineGridViewClickAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/AssNineGridViewWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/ImageInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity$1$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity$MyPagerAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssImgPreviewActivity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/javac/debug/classes/com/assionhonty/lib/assninegridview/assImgPreview/AssViewPager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/local_only_symbol_list/debug/R-def.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/merged_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/navigation_json/debug/navigation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_manifests/debug/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_res/debug/anim/fade_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_res/debug/anim/fade_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_res/debug/drawable/ic_default_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_res/debug/layout/ass_img_preview_activity.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_res/debug/layout/ass_img_preview_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/runtime_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/src/androidTest/java/com/assionhonty/lib/assninegridview/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib_assninegridview/src/test/java/com/assionhonty/lib/assninegridview/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/.transforms/736cb1eb85a29f7cb6d53d13a72d4bc7.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/.transforms/736cb1eb85a29f7cb6d53d13a72d4bc7/classes/classes.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/generated/source/buildConfig/debug/com/hjq/widget/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/aar_metadata/debug/aar-metadata.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compile_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compile_r_class_jar/debug/R.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compile_symbol_list/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_bottom_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_bottom_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_ios_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_ios_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_left_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_left_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_right_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_right_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_scale_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_scale_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_top_in.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_dialog_top_out.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_item_animation_fall_down.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_item_animation_from_bottom.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_item_animation_from_right.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_layout_animation_fall_down.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_layout_animation_from_bottom.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/anim_layout_animation_from_right.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/drawable-xxhdpi-v4_ic_input_delete.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/drawable-xxhdpi-v4_ic_input_hide.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/drawable-xxhdpi-v4_ic_input_show.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/compiled_local_resources/debug/out/layout_widget_hint_layout.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/CustomViewStub$OnViewStubListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/CustomViewStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/HintLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/NoScrollViewPager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/RatioFrameLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/SettingBar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/layout/SimpleLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareButton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareCardView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareDelegate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareFrameLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareImageView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareLinearLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareRelativeLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/square/SquareTextView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/AnimImageView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/ClearEditText.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/CountdownView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/PasswordEditText.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/RegexEditText.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/ScaleImageView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/SmartTextView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/SwitchButton$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/SwitchButton$OnCheckedChangeListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/SwitchButton$SavedState$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/SwitchButton$SavedState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/javac/debug/classes/com/hjq/widget/view/SwitchButton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/local_only_symbol_list/debug/R-def.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/merged_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/navigation_json/debug/navigation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_manifests/debug/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_bottom_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_bottom_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_ios_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_ios_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_left_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_left_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_right_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_right_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_scale_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_scale_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_top_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/dialog_top_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/item_animation_fall_down.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/item_animation_from_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/item_animation_from_right.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/layout_animation_fall_down.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/layout_animation_from_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/anim/layout_animation_from_right.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/drawable-xxhdpi-v4/ic_input_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/drawable-xxhdpi-v4/ic_input_hide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/drawable-xxhdpi-v4/ic_input_show.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/layout/widget_hint_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/runtime_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widget/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/activity/HttpUtile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/activity/HttpUtile.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/activity/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/confi/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/confi/MyApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/HomeMyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fragment/HomeMyFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/interceptor/CustomSignInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/interceptor/CustomSignInterceptor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/view/PhotoViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/view/PhotoViewPager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/CustomViewStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/CustomViewStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/HintLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/HintLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/NoScrollViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/NoScrollViewPager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/RatioFrameLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/RatioFrameLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/SettingBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/SettingBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/SimpleLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/layout/SimpleLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareCardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareCardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareFrameLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareFrameLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareImageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareLinearLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareLinearLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareRelativeLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareRelativeLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareTextView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/square/SquareTextView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/AnimImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/AnimImageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/ClearEditText.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/ClearEditText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/CountdownView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/CountdownView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/PasswordEditText.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/PasswordEditText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/RegexEditText.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/RegexEditText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/ScaleImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/ScaleImageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/SmartTextView.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/SmartTextView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/SwitchButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/widget/src/main/java/com/hjq/widget/view/SwitchButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@emulator-5554]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\christiano\.android\avd\Nexus_5X_API_28.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -101,6 +330,14 @@
     <property name="android-custom-viewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/widget/EditText.java_SELECTED" value="EditText" />
     <property name="android-custom-viewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/widget/LinearLayout.java_SELECTED" value="LinearLayout" />
     <property name="android-custom-viewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/widget/TextView.java_SELECTED" value="" />
+    <property name="android-custom-viewC:/Users/christiano/.gradle/caches/modules-2/files-2.1/androidx.viewpager/viewpager/1.0.0/db045f92188b9d247d5f556866f8861ab68528f0/viewpager-1.0.0-sources.jar!/androidx/viewpager/widget/ViewPager.java_SELECTED" value="ViewPager" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/app/src/main/java/com/example/view/MytextView.java_SELECTED" value="MytextView" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/app/src/main/java/com/example/view/PhotoViewPager.java_SELECTED" value="PhotoViewPager" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/lib_assninegridview/src/main/java/com/assionhonty/lib/assninegridview/AssNineGridView.java_SELECTED" value="AssNineGridView" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/widget/src/main/java/com/hjq/widget/layout/NoScrollViewPager.java_SELECTED" value="NoScrollViewPager" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/widget/src/main/java/com/hjq/widget/view/AnimImageView.java_SELECTED" value="AnimImageView" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/widget/src/main/java/com/hjq/widget/view/RegexEditText.java_SELECTED" value="RegexEditText" />
+    <property name="android-custom-viewE:/1.0Today/Android/Code/comproject/Demo/widget/src/main/java/com/hjq/widget/view/SwitchButton.java_SELECTED" value="SwitchButton" />
     <property name="android-custom-viewE:/Android_studio/kotlin_Project/Demo/app/src/main/java/com/example/myapplication/view/LollipopFixedWebView.java_SELECTED" value="LollipopFixedWebView" />
     <property name="android-custom-viewE:/Android_studio/kotlin_Project/Demo/app/src/main/java/com/example/myapplication/view/MytextView.java_SELECTED" value="MytextView" />
     <property name="android-custom-viewE:/Android_studio/kotlin_Project/Demo/app/src/main/java/com/example/myapplication/view/PhotoViewPager.java_SELECTED" value="PhotoViewPager" />
@@ -111,7 +348,7 @@
     <property name="android.sdk.path" value="C:/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/example" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../wan/WanAndroid-master" />
     <property name="multi-representation-previewC:/Users/Administrator/.gradle/wrapper/dists/gradle-6.1.1-all/cfmwm155h49vnt3hynmlrsdst/gradle-6.1.1/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk15/0.8.3/a0c6e3f93ef23044c97580be5cc33ac71b67a31b/anko-sdk15-0.8.3-sources.jar!/org/jetbrains/anko/Layouts.kt_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Administrator/AppData/Local/Android/Sdk/sources/android-30/android/view/ViewGroup.java_selected" value="Custom views" />
@@ -196,8 +433,31 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
       <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_PROFILING_ENABLED" value="false" />
@@ -458,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623116714775</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="【KotLin】添加自定义返回数据解析">
+      <created>1623120523900</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1623120523900</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -493,7 +760,8 @@
     <MESSAGE value="【KotLin】成功案例" />
     <MESSAGE value="【KotLin】数据保存优化" />
     <MESSAGE value="【KotLin】数据保存优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="【KotLin】数据保存优化" />
+    <MESSAGE value="【KotLin】添加自定义返回数据解析" />
+    <option name="LAST_COMMIT_MESSAGE" value="【KotLin】添加自定义返回数据解析" />
   </component>
   <component name="WindowStateProjectService">
     <state x="187" y="295" width="1377" height="676" key="#PSD" timestamp="1623046486599">
@@ -561,81 +829,94 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="750" y="280" key="AndroidCreateXmlResourceDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622021396936" />
-    <state x="473" y="3" key="CommitChangelistDialog2" timestamp="1623116713632">
+    <state x="473" y="3" key="CommitChangelistDialog2" timestamp="1623120522639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="473" y="3" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622094850189" />
-    <state x="473" y="3" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116713632" />
+    <state x="473" y="3" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120522639" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1623045745529">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623045745529" />
-    <state x="1067" y="300" key="FileChooserDialogImpl" timestamp="1622453105991">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="1067" y="297" key="FileChooserDialogImpl" timestamp="1623138504645">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622014494714" />
     <state x="1067" y="300" key="FileChooserDialogImpl/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622453105991" />
+    <state x="1067" y="297" key="FileChooserDialogImpl/1920.9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623138504645" />
     <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1623116768512">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622092773637" />
     <state x="813" y="239" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623116768512" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="815" y="417" key="Github.ShareDialog" timestamp="1623290580284">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="815" y="417" key="Github.ShareDialog/1920.9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623290580284" />
+    <state width="1877" height="299" key="GridCell.Tab.0.bottom" timestamp="1623134898488">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.0.bottom/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898488" />
+    <state width="1877" height="299" key="GridCell.Tab.0.center" timestamp="1623134898487">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783065" />
     <state width="1877" height="385" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
     <state width="1877" height="347" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.0.center/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898487" />
+    <state width="1877" height="299" key="GridCell.Tab.0.left" timestamp="1623134898487">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783065" />
     <state width="1877" height="385" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
     <state width="1877" height="347" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.0.left/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898487" />
+    <state width="1877" height="299" key="GridCell.Tab.0.right" timestamp="1623134898487">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783066" />
     <state width="1877" height="385" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850892" />
     <state width="1877" height="347" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.0.right/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898487" />
+    <state width="1877" height="299" key="GridCell.Tab.1.bottom" timestamp="1623134898488">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658655" />
     <state width="1876" height="265" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.1.bottom/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898488" />
+    <state width="1877" height="299" key="GridCell.Tab.1.center" timestamp="1623134898488">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
     <state width="1877" height="347" key="GridCell.Tab.1.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.1.center/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898488" />
+    <state width="1877" height="299" key="GridCell.Tab.1.left" timestamp="1623134898488">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658654" />
     <state width="1876" height="265" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
     <state width="1877" height="347" key="GridCell.Tab.1.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1623120382955">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="299" key="GridCell.Tab.1.left/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898488" />
+    <state width="1877" height="299" key="GridCell.Tab.1.right" timestamp="1623134898488">
+      <screen x="1920" y="9" width="1920" height="1040" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620368658655" />
     <state width="1876" height="265" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620435783067" />
     <state width="1877" height="385" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097850893" />
     <state width="1877" height="347" key="GridCell.Tab.1.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120382955" />
+    <state width="1877" height="299" key="GridCell.Tab.1.right/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623134898488" />
     <state x="683" y="143" key="RollbackChangesDialog" timestamp="1623119697136">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -670,12 +951,14 @@
     </state>
     <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622083505797" />
     <state x="518" y="172" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623118578318" />
-    <state x="726" y="241" width="766" height="740" key="find.popup" timestamp="1623120390101">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="726" y="239" width="766" height="733" key="find.popup" timestamp="1623290283151">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1257" y="247" width="594" height="586" key="find.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1620800161447" />
     <state x="663" y="247" width="766" height="650" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1622097842365" />
     <state x="726" y="241" width="766" height="740" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1623120390101" />
+    <state x="726" y="239" width="766" height="733" key="find.popup/1920.9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623290283151" />
+    <state x="2646" y="248" width="766" height="733" key="find.popup/1920.9.1920.1040/0.0.1920.1040@1920.9.1920.1040" timestamp="1623132661929" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1622082990093">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -6,8 +6,8 @@ import android.util.AttributeSet;
 import androidx.appcompat.widget.AppCompatButton;
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2019/07/06
  * desc   : 正方形的 Button
  */

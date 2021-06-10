@@ -8,8 +8,8 @@ import android.widget.FrameLayout;
 import com.hjq.widget.R;
 
 /**
- * author : Android 轮子哥
- * github : https://github.com/getActivity/AndroidProject
+
+ * github : https://github.com/JohnGreenn
  * time   : 2019/08/23
  * desc   : 按照比例显示的 FrameLayout
  */
